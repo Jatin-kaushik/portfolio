@@ -4,21 +4,21 @@ const settings = {
 
 //SEO Related settings
 const seo = {
-  title: "Rohan Kokkula | Portfolio",
+  title: "Jatin Kaushik | Portfolio",
   description:
-    "A Data Science practitioner who thrives to leverage startups with AI based solutions with a blend of UI/UX",
+    "I am an enthusiastic, Passionate, Highly motivated and Self-driven Engineering student with Interest in Data Science, Analytics and Programming with Strong background in Python and knowledge of various types of machine learning and deep learning techniques.",
   og: {
-    title: "Rohan Portfolio",
+    title: "Jatin Portfolio",
     type: "website",
-    url: "http://rohankokkula.ml/",
+    url: "http://jatinkaushik.ml/",
   },
 };
 
 //Home Page
 const greeting = {
   title: "Namaste!",
-  sub: "Rohan Kokkula",
-  logo_name: "Rohan Kokkula",
+  sub: "Jatin Kaushik",
+  logo_name: "Jatin Kaushik",
   resumeLink: "",
 };
 
@@ -31,7 +31,7 @@ const competitiveSites = {
       style: {
         color: "white",
       },
-      profileLink: "https://github.com/rohankokkula",
+      profileLink: "https://github.com/Jatin-kaushik",
     },
     {
       siteName: "HackerRank",
@@ -39,7 +39,7 @@ const competitiveSites = {
       style: {
         color: "#2EC866",
       },
-      profileLink: "https://www.hackerrank.com/rohankokkula01",
+      profileLink: "https://www.hackerrank.com/jatinkaushik_",
     },
     {
       siteName: "Kaggle",
@@ -47,7 +47,7 @@ const competitiveSites = {
       style: {
         color: "#20BEFF",
       },
-      profileLink: "https://www.kaggle.com/rohan0301",
+      profileLink: "https://www.kaggle.com/jatinkaushikjk",
     },
     {
       siteName: "Hackerearth",
@@ -55,7 +55,7 @@ const competitiveSites = {
       style: {
         color: "#323754",
       },
-      profileLink: "https://www.hackerearth.com/@rohankokkula",
+      profileLink: "https://www.hackerearth.com/@Jatinkaushik",
     },
     {
       siteName: "LinkedIn",
@@ -63,7 +63,7 @@ const competitiveSites = {
       style: {
         color: "#0077b5",
       },
-      profileLink: "https://www.linkedin.com/in/rohankokkula/",
+      profileLink: "https://www.linkedin.com/in/jatin-kaushik/",
     },
     {
       siteName: "HashNode",
@@ -139,9 +139,9 @@ const skills = {
       title: "Web Development",
       fileName: "FullStackImg",
       skills: [
-        "⚡ Building responsive websites using HTML5, CSS3, BootStrap5, ReactJS & NodeJS",
-        "⚡ Creating application backend in Node, Flask & Streamlit",
-        "⚡ Having experience in Domain & Hosting using Netlify, Vercel, Heroku & Hostinger",
+        "⚡ Building responsive websites using HTML5, CSS3 & BootStrap",
+        "⚡ Creating application backend in Flask, Streamlit & Dash",
+        "⚡ Having experience in Domain & Hosting using Netlify, Heroku, Github, Gitlab & Hostinger",
       ],
       softwareSkills: [
         {
@@ -159,13 +159,6 @@ const skills = {
           },
         },
         {
-          skillName: "Sass",
-          fontAwesomeClassname: "simple-icons:sass",
-          style: {
-            color: "#CC6699",
-          },
-        },
-        {
           skillName: "BootStrap",
           fontAwesomeClassname: "logos-bootstrap",
           style: {
@@ -173,30 +166,37 @@ const skills = {
           },
         },
         {
-          skillName: "JavaScript",
-          fontAwesomeClassname: "simple-icons:javascript",
+          skillName: "FLask",
+          fontAwesomeClassname: "simple-icons:flask",
           style: {
             backgroundColor: "#000000",
             color: "#F7DF1E",
           },
         },
         {
-          skillName: "ReactJS",
-          fontAwesomeClassname: "simple-icons:react",
+          skillName: "Heroku",
+          fontAwesomeClassname: "simple-icons:heroku",
           style: {
             color: "#61DAFB",
           },
         },
         {
-          skillName: "NodeJS",
-          fontAwesomeClassname: "simple-icons:node-dot-js",
+          skillName: "Streamlit",
+          fontAwesomeClassname: "simple-icons:streamlit",
           style: {
             color: "#339933",
           },
         },
         {
-          skillName: "NPM",
-          fontAwesomeClassname: "simple-icons:npm",
+          skillName: "Github",
+          fontAwesomeClassname: "simple-icons:github",
+          style: {
+            color: "#CB3837",
+          },
+        },
+        {
+          skillName: "Gitlab",
+          fontAwesomeClassname: "simple-icons:gitlab",
           style: {
             color: "#CB3837",
           },
@@ -204,41 +204,41 @@ const skills = {
       ],
     },
     {
-      title: "UI/UX Design",
+      title: "Visualization Design",
       fileName: "DesignImg",
       skills: [
-        "⚡ Designing highly attractive user interfaces for mobile and web applications",
-        "⚡ Customizing logo designs and building logos from scratch",
-        "⚡ Creating the flow of application functionalities to optimize user experience",
+        "⚡ Dashboard designing highly attractive user interfaces for mobile and web applications using python and Visualization tool",
+        "⚡ Tableau Developer with highly skills interactive Dashboard developer",
+        "⚡ Creating the flow of charts functionalities to optimize user experience",
         "⚡ Applying latest Design principles and experienced in product wireframing",
       ],
       softwareSkills: [
         {
-          skillName: "Adobe XD",
-          fontAwesomeClassname: "simple-icons:adobexd",
+          skillName: "Tableau",
+          fontAwesomeClassname: "simple-icons:tableau",
           style: {
             color: "#FF2BC2",
           },
         },
         {
-          skillName: "Adobe Illustrator",
-          fontAwesomeClassname: "simple-icons:adobeillustrator",
+          skillName: "Python-Dash",
+          fontAwesomeClassname: "simple-icons:python",
           style: {
             color: "#FF7C00",
           },
         },
         {
-          skillName: "Adobe Photoshop",
-          fontAwesomeClassname: "simple-icons:adobephotoshop",
+          skillName: "Plotly",
+          fontAwesomeClassname: "simple-icons:plotly",
           style: {
             color: "#2fa3f7",
           },
         },
         {
-          skillName: "Figma",
-          fontAwesomeClassname: "simple-icons:figma",
+          skillName: "Python-Matplotlib",
+          fontAwesomeClassname: "simple-icons:python",
           style: {
-            color: "#F24E1E",
+            color: "#81FBBB",
           },
         },
       ],
@@ -452,8 +452,8 @@ const resumeleft = {
     title: ["Experience"],
     data: [
       {
-        title: "Data Scientist",
-        subtitle: "Nactus India Services Private Limited",
+        title: "Data Science Intern",
+        subtitle: "ByteBlanket Software and Solutions",
         date: "June 2020 - present",
         content: [
           "Used T5 Transformer Model to build a Question Answering Model which generates questions based on Keywords extracted (WordNet, Sense2Vec) from studyshot notes.",
@@ -466,36 +466,6 @@ const resumeleft = {
           "Working on recommendation system for concept notes and questions based on student's behavior on our Flutter App(tracking)",
         ],
       },
-      {
-        title: "Machine Learning Intern",
-        subtitle: "Listnr",
-        date: "April 2020 - June 2020",
-        content: [
-          "My role at Listnr included a lot of research work about Audio Encoders and Vocoders and Speech Synthesis in general.",
-          "Worked on some SOTA Inference TTS Models such as TacoTron2, FastSpeech2, and Wavenet.",
-          "Also had hands-on with real-time voice cloning algorithm.",
-        ],
-      },
-      {
-        title: "Data Science Intern",
-        subtitle: "iNeuron.ai",
-        date: "Nov 2020 - January 2021",
-        content: [
-          "Phase 1 included Data Cleaning & Data Annotation for object detection task",
-          "Used YOLO v5 for Fire Detection Project",
-        ],
-      },
-      {
-        title: "Summer Analytics Participant",
-        subtitle: "IIT Guwahati",
-        date: "April 2020 - June 2020",
-        content: [
-          "Learnt & applied various Machine Learning libraries",
-          "Had hands-on with Data Visualization techniques using matplotlib, plotly, streamlit",
-          "Understood and applied Neural networks using Tensorflow and finally competed in Kaggle Hackathon ranking 135 (top 16 percentile) among 854 Kaggle participants",
-          "Ranked 85 out of 1500+ students for overall performance.",
-        ],
-      },
     ],
   },
 };
@@ -506,16 +476,17 @@ const resumeright = {
       title: ["Education"],
       data: [
         {
-          title: "Bachelor of Engineering in Information Technology",
-          subtitle: "Vidyalankar Institute of Technology, Mumbai",
-          date: "2016 - 2020",
-          content: ["CGPA: 8.06/10"],
+          title:
+            "Bachelor of Engineering in Electronics and Communication Engineering",
+          subtitle: "HMR Institute of Technology and Management, New Delhi",
+          date: "2018 - 2022",
+          content: ["Overall CGPA: 8.3/10"],
         },
         {
-          title: "Higher Secondary Certificate [HSC]",
-          subtitle: "Dr. Antonio Da Silva Technical Jr. College, Mumbai",
-          date: "2014 - 2016",
-          content: ["Precentage: 80%"],
+          title: "Higher Secondary School Certificate [HSSC]",
+          subtitle: "Indraprastha Convent Sr. Secondary School, New Delhi",
+          date: "2016 - 2018",
+          content: ["CGPA: 7.6/10"],
         },
       ],
     },
@@ -683,11 +654,11 @@ const contactPageData = {
   },
   addressSection: {
     title: "Address",
-    subtitle: "Prabhadevi, Mumbai-400025",
+    subtitle: "Rohini Sector-37, New Delhi-110086",
   },
   phoneSection: {
     title: "Phone Number",
-    subtitle: "+91 9022817659",
+    subtitle: "+91 8826599252",
   },
 };
 
@@ -695,32 +666,26 @@ const contactPageData = {
 const socialMediaLinks = [
   {
     name: "Github",
-    link: "https://www.linkedin.com/in/rohankokkula/",
+    link: "https://github.com/Jatin-kaushik",
     iconifyClassname: "simple-icons:hackerrank",
     fontAwesomeIcon: "fa-github", // Reference https://fontawesome.com/icons/github?style=brands
     backgroundColor: "#181717", // Reference https://simpleicons.org/?q=github
   },
   {
     name: "LinkedIn",
-    link: "https://www.linkedin.com/in/rohankokkula/",
+    link: "https://www.linkedin.com/in/jatin-kaushik/",
     fontAwesomeIcon: "fa-linkedin-in", // Reference https://fontawesome.com/icons/linkedin-in?style=brands
     backgroundColor: "#0077B5", // Reference https://simpleicons.org/?q=linkedin
   },
   {
-    name: "YouTube",
-    link: "https://www.youtube.com/channel/UC_amoXmmxSY9KusoDczDTXQ",
-    fontAwesomeIcon: "fa-youtube", // Reference https://fontawesome.com/icons/youtube?style=brands
-    backgroundColor: "#FF0000", // Reference https://simpleicons.org/?q=youtube
-  },
-  {
     name: "Gmail",
-    link: "mailto:rohankokkula01@gmail.com",
+    link: "mailto:JatinchandKaushik@gmail.com",
     fontAwesomeIcon: "fa-google", // Reference https://fontawesome.com/icons/google?style=brands
     backgroundColor: "#D14836", // Reference https://simpleicons.org/?q=gmail
   },
   {
     name: "Instagram",
-    link: "https://www.instagram.com/soberohan/",
+    link: "https://www.instagram.com/Jatinchandkaushik/",
     fontAwesomeIcon: "fa-instagram", // Reference https://fontawesome.com/icons/instagram?style=brands
     backgroundColor: "#E4405F", // Reference https://simpleicons.org/?q=instagram
   },
