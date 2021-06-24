@@ -84,9 +84,11 @@ const skills = {
       fileName: "DataScienceImg",
       skills: [
         "⚡ Developing highly scalable production-ready models for various deep learning and statistical use cases",
-        "⚡ Experience in working with Computer Vision using OpenCV and NLP projects(T5-Transformer & OpenAI)",
-        "⚡ Having good hands-on with Data Cleaning, processing & Analysing using Pandas, Tableau & PowerBI",
-        "⚡ Experience with Text-to-speech encoders/decoders (speech synthesis) & Voice Cloning",
+        "⚡ Experience in working with Computer Vision using OpenCV and NLP projects(Chatterbot)",
+        "⚡ Having good hands-on with Data Cleaning, processing & Analysing using Numpy, Pandas, Tableau & PowerBI",
+        "⚡ Experience with Text-to-speech encoders/decoders (speech synthesis)",
+        "⚡ Experienced in Flask Rest-API for deployment of ML Model",
+        "⚡ Having good knowledge of Python Development",
       ],
       softwareSkills: [
         {
