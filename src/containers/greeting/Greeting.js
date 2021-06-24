@@ -70,7 +70,10 @@ export default function Greeting(props) {
                 <Button
                   text="See my resume"
                   newTab={true}
-                  href={greeting.resumeLink}
+                  href={
+                    (greeting.resumeLink =
+                      "https://www.linkedin.com/in/jatin-kaushik/detail/overlay-view/urn:li:fsd_profileTreasuryMedia:(ACoAADDQg8QBf9pFUi61iKiGqe_lfNOzWaOZueI,1635460507931)/")
+                  }
                 />
               </div>
             </div>

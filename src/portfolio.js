@@ -53,7 +53,7 @@ const competitiveSites = {
       siteName: "Hackerearth",
       iconifyClassname: "simple-icons:hackerearth",
       style: {
-        color: "#323754",
+        color: "#24E7EE",
       },
       profileLink: "https://www.hackerearth.com/@Jatinkaushik",
     },
@@ -258,7 +258,7 @@ const projectsHeader = {
 const projectcards = {
   list: [
     {
-      title: "TEATH",
+      title: "OCR Streamlit",
       img_path: "project-06.png",
       description:
         "A WebApp for Extracting Text from Images and applying various thresholding methods with sentiment analysis using TextBlob",
@@ -284,166 +284,166 @@ const projectcards = {
           color: "#3c0095",
         },
       ],
-      link: "https://teath.herokuapp.com ",
-      code: "https://github.com/rohankokkula/TEATH",
-      linkcolor: "white",
-    },
-
-    {
-      title: "Voice Gender Detection",
-      img_path: "voice.gif",
-      description:
-        "A streamlit webapp which detects user's gender and emotion based on realtime audio input.",
-      tags: [
-        {
-          lang: "ongoing",
-          color: "red",
-        },
-        {
-          lang: "python",
-          color: "#004782",
-        },
-        {
-          lang: "matplotlib",
-          color: "#c47206",
-        },
-        {
-          lang: "tensorflow",
-          color: "#4257f5",
-        },
-        {
-          lang: "Streamlit",
-          color: "#ff4b4b",
-        },
-      ],
-      link: "",
-      code: "",
-      linkcolor: "white",
-    },
-    {
-      title: "NeuralViz",
-      img_path: "neural.gif",
-      description:
-        "A webapp to visualize Neural Networks based on no. of layers and neurons, calculate Loss and understand math behind Back Propagation algo.",
-      tags: [
-        {
-          lang: "python",
-          color: "#004782",
-        },
-        {
-          lang: "numpy",
-          color: "#8700b0",
-        },
-        {
-          lang: "matplotlib",
-          color: "#c47206",
-        },
-        {
-          lang: "Streamlit",
-          color: "#ff4b4b",
-        },
-        {
-          lang: "Heroku",
-          color: "#3c0095",
-        },
-      ],
-      link: "https://neuralviz.herokuapp.com/",
-      code: "https://github.com/rohankokkula/neuralviz",
-      linkcolor: "white",
-    },
-    {
-      title: "Semantic Search APP",
-      img_path: "project-03.png",
-      description:
-        "Demo of OpenAI's GPT-3 model on Semantic search using streamlit.",
-      tags: [
-        {
-          lang: "ongoing",
-          color: "red",
-        },
-        {
-          lang: "Streamlit",
-          color: "#ff4b4b",
-        },
-      ],
-      link: "",
-      code: "",
-      linkcolor: "white",
-    },
-    {
-      title: "Youtube Thumbnail Generator & AutoUploader",
-      img_path: "project-02.png",
-      description:
-        "A python streamlit webapp to automate generating & uploading youtube thumbnails using Youtube v3 API",
-      tags: [
-        {
-          lang: "internal project",
-          color: "red",
-        },
-        {
-          lang: "youtube v3 api",
-          color: "red",
-        },
-      ],
       link: "",
       code: "",
       linkcolor: "white",
     },
 
-    {
-      title: "Newsearcher",
-      img_path: "news.gif",
-      description:
-        "Enter your search keyword and get a summary of news weblinks with images without actually opening the links.",
-      tags: [
-        {
-          lang: "python",
-          color: "#004782",
-        },
-        {
-          lang: "newspaper3k",
-          color: "#303030",
-        },
-        {
-          lang: "Streamlit",
-          color: "#ff4b4b",
-        },
-        {
-          lang: "nltk",
-          color: "#051c61",
-        },
-      ],
-      link: "https://newsearcher.herokuapp.com/",
-      code: "https://github.com/rohankokkula/Newsearcher",
-      linkcolor: "white",
-    },
-    {
-      title: "ActiWeight",
-      img_path: "acti.gif",
-      description:
-        "ActiWeight is an Interactive Visualizer for understanding intuition behind 10 Activation Functions used in Neural Networks.",
-      tags: [
-        {
-          lang: "python",
-          color: "#004782",
-        },
-        {
-          lang: "matplotlib",
-          color: "#c47206",
-        },
-        {
-          lang: "Streamlit",
-          color: "#ff4b4b",
-        },
-        {
-          lang: "Heroku",
-          color: "#3c0095",
-        },
-      ],
-      link: "https://www.youtube.com/watch?v=2vk9lQuX_1Q",
-      code: "https://github.com/rohankokkula/Actiweight",
-      linkcolor: "white",
-    },
+    // {
+    //   title: "Signature Verification Recognition",
+    //   img_path: "voice.gif",
+    //   description:
+    //     "A streamlit webapp which detects user's gender and emotion based on realtime audio input.",
+    //   tags: [
+    //     {
+    //       lang: "ongoing",
+    //       color: "red",
+    //     },
+    //     {
+    //       lang: "python",
+    //       color: "#004782",
+    //     },
+    //     {
+    //       lang: "matplotlib",
+    //       color: "#c47206",
+    //     },
+    //     {
+    //       lang: "tensorflow",
+    //       color: "#4257f5",
+    //     },
+    //     {
+    //       lang: "Streamlit",
+    //       color: "#ff4b4b",
+    //     },
+    //   ],
+    //   link: "",
+    //   code: "",
+    //   linkcolor: "white",
+    // },
+    // {
+    //   title: "NeuralViz",
+    //   img_path: "neural.gif",
+    //   description:
+    //     "A webapp to visualize Neural Networks based on no. of layers and neurons, calculate Loss and understand math behind Back Propagation algo.",
+    //   tags: [
+    //     {
+    //       lang: "python",
+    //       color: "#004782",
+    //     },
+    //     {
+    //       lang: "numpy",
+    //       color: "#8700b0",
+    //     },
+    //     {
+    //       lang: "matplotlib",
+    //       color: "#c47206",
+    //     },
+    //     {
+    //       lang: "Streamlit",
+    //       color: "#ff4b4b",
+    //     },
+    //     {
+    //       lang: "Heroku",
+    //       color: "#3c0095",
+    //     },
+    //   ],
+    //   link: "https://neuralviz.herokuapp.com/",
+    //   code: "https://github.com/rohankokkula/neuralviz",
+    //   linkcolor: "white",
+    // },
+    // {
+    //   title: "Semantic Search APP",
+    //   img_path: "project-03.png",
+    //   description:
+    //     "Demo of OpenAI's GPT-3 model on Semantic search using streamlit.",
+    //   tags: [
+    //     {
+    //       lang: "ongoing",
+    //       color: "red",
+    //     },
+    //     {
+    //       lang: "Streamlit",
+    //       color: "#ff4b4b",
+    //     },
+    //   ],
+    //   link: "",
+    //   code: "",
+    //   linkcolor: "white",
+    // },
+    // {
+    //   title: "Youtube Thumbnail Generator & AutoUploader",
+    //   img_path: "project-02.png",
+    //   description:
+    //     "A python streamlit webapp to automate generating & uploading youtube thumbnails using Youtube v3 API",
+    //   tags: [
+    //     {
+    //       lang: "internal project",
+    //       color: "red",
+    //     },
+    //     {
+    //       lang: "youtube v3 api",
+    //       color: "red",
+    //     },
+    //   ],
+    //   link: "",
+    //   code: "",
+    //   linkcolor: "white",
+    // },
+
+    // {
+    //   title: "Newsearcher",
+    //   img_path: "news.gif",
+    //   description:
+    //     "Enter your search keyword and get a summary of news weblinks with images without actually opening the links.",
+    //   tags: [
+    //     {
+    //       lang: "python",
+    //       color: "#004782",
+    //     },
+    //     {
+    //       lang: "newspaper3k",
+    //       color: "#303030",
+    //     },
+    //     {
+    //       lang: "Streamlit",
+    //       color: "#ff4b4b",
+    //     },
+    //     {
+    //       lang: "nltk",
+    //       color: "#051c61",
+    //     },
+    //   ],
+    //   link: "https://newsearcher.herokuapp.com/",
+    //   code: "https://github.com/rohankokkula/Newsearcher",
+    //   linkcolor: "white",
+    // },
+    // {
+    //   title: "ActiWeight",
+    //   img_path: "acti.gif",
+    //   description:
+    //     "ActiWeight is an Interactive Visualizer for understanding intuition behind 10 Activation Functions used in Neural Networks.",
+    //   tags: [
+    //     {
+    //       lang: "python",
+    //       color: "#004782",
+    //     },
+    //     {
+    //       lang: "matplotlib",
+    //       color: "#c47206",
+    //     },
+    //     {
+    //       lang: "Streamlit",
+    //       color: "#ff4b4b",
+    //     },
+    //     {
+    //       lang: "Heroku",
+    //       color: "#3c0095",
+    //     },
+    //   ],
+    //   link: "https://www.youtube.com/watch?v=2vk9lQuX_1Q",
+    //   code: "https://github.com/rohankokkula/Actiweight",
+    //   linkcolor: "white",
+    // },
   ],
 };
 
@@ -664,7 +664,7 @@ const socialMediaLinks = [
     link: "https://github.com/Jatin-kaushik",
     iconifyClassname: "simple-icons:hackerrank",
     fontAwesomeIcon: "fa-github", // Reference https://fontawesome.com/icons/github?style=brands
-    backgroundColor: "#181717", // Reference https://simpleicons.org/?q=github
+    backgroundColor: "#ffffff", // Reference https://simpleicons.org/?q=github
   },
   {
     name: "LinkedIn",
