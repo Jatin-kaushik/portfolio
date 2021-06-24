@@ -456,14 +456,12 @@ const resumeleft = {
         subtitle: "ByteBlanket Software and Solutions",
         date: "June 2020 - present",
         content: [
-          "Used T5 Transformer Model to build a Question Answering Model which generates questions based on Keywords extracted (WordNet, Sense2Vec) from studyshot notes.",
-          "Built an MCQ Generation model using BERT",
-          "Developed a personalized Chatbot using Rasa (Botfront.io).",
-          "Created an Automatic Thumbnail Generator & Uploader for our youtube videos using Youtube v3 API",
-          "Working on OpenAI's semantic search engine.",
-          "Created a Clean MaterialUI Design for prototyping and design fixing before production-ready of APP",
-          "Created FrontEnd components for StudyShot website",
-          "Working on recommendation system for concept notes and questions based on student's behavior on our Flutter App(tracking)",
+          "Face Expression Detector : As an intern, I was assigned to Data Science team and assigned project to create a fast and scalable solution for Expression Detection using facial recognition.",
+          "Face Recognition System : As an intern, I was assigned to Data Science team and assigned project to create a fast and scalable solution for authentication using facial recognition.",
+          "Tableau Dashboards for Work Efficiency : Designed and created Tableau Dashboard to track and manage queries assigned, closed and pending and helps improve the work efficiency.",
+          "Merchant Web Dashboard : Created client facing web dashboard application using python, plotly and Dash to track and monitor inventory for merchants.",
+          "Chatbot Web App : Created Chatbot to provide order related answers to common customer queries.",
+          "Signature Verification for Fintech Client : Currently working on building a signature verification app using deep learning and CV techniques.",
         ],
       },
     ],
@@ -496,16 +494,16 @@ const resumeright = {
         {
           title: "Ranks",
           content: [
-            "#135/854 in Summer Analytics Kaggle Competition by IITG",
-            "#113/5064 in CV-NLP Hackathon by HackerEarth",
+            "#3 in E-sports Championship Emblazon 2019",
+            "#1 Rank Holder in NEO Olympiad 3.0",
           ],
         },
         {
           title: "Achievements",
           content: [
-            "Designing Team Head at ACM-VIT",
-            "5⭐ Gold Badges for Python & Problem Solving at HackerRank ",
-            "Tableau Analyst & Consumer Badge by Tableau Official",
+            "LinkedIn Python Assessmment Certified",
+            "4⭐ Badges for Python, Python and RestAPI Certified at HackerRank ",
+            "Cleared Infosys Certification for Certified Software Engineer",
           ],
         },
       ],
@@ -514,17 +512,24 @@ const resumeright = {
       title: ["Freelance Work"],
       data: [
         {
-          title: "Consultancy Website",
-          subtitle: "kidsworldeducationconsultants.com",
+          title: "Data Analysis",
+          subtitle: "fiverr.com",
           content: [
-            "Created and hosted a website for consultancy providers in Kids Education Domain",
+            "Created programm for Client for Big Data processing using DASK",
+          ],
+        },
+        {
+          title: "Data Visualization",
+          subtitle: "fiverr.com",
+          content: [
+            "Created Graphs and chart and prepare a Web dashboard for Client for visualtization using DASH",
           ],
         },
         {
           title: "Portfolio Website",
-          subtitle: "pranavphulware.netlify.app",
+          subtitle: "Jatinkaushik.tk",
           content: [
-            "Built a personal Filmography portfolio for a friend and later hosted it at Netlify",
+            "Built a personal Portfolio Website with the help or @rohanKokkula and @mohitnegi",
           ],
         },
       ],
@@ -536,91 +541,81 @@ const resumeright = {
 const certifications = {
   certifications: [
     {
-      title: "Tableau Analyst",
-      subtitle: "Tableau",
-      logo_path: "tabana-01.png",
+      title: "Python 101 for Data Science",
+      subtitle: "Data Science",
+      logo_path: "cc.png",
       certificate_link:
-        "https://www.credly.com/badges/2d43f401-7be0-407d-9a77-7477dda8cade/linked_in_profile",
-      alt_name: "Tableau",
+        "https://courses.cognitiveclass.ai/certificates/45a95ca65436444e85e4485807d7b67f",
+      alt_name: "Cognitive",
       color_code: "#000000",
     },
     {
-      title: "Tableau Consumer",
-      subtitle: "Tableau",
-      logo_path: "tabcon-01.png",
+      title: "SQL and Relational Databases 101",
+      subtitle: "SQL",
+      logo_path: "cc.png",
       certificate_link:
-        "https://www.credly.com/badges/e5befe7b-2eec-486f-b77e-bd2458c18b26/linked_in_profile",
-      alt_name: "Tableau",
+        "https://courses.cognitiveclass.ai/certificates/08a88c387dc44d2a88a6592cf83689cd",
+      alt_name: "Cognitive",
       color_code: "#000000",
     },
     {
-      title: "Problem solving",
-      subtitle: "HackerRank",
-      logo_path: "problem-01.png",
-      certificate_link: "https://www.hackerrank.com/rohankokkula",
-      alt_name: "HackerRank",
-      color_code: "#000000",
-    },
-    {
-      title: "Python",
-      subtitle: "HackerRank",
-      logo_path: "python-01.png",
-      certificate_link: "https://www.hackerrank.com/rohankokkula",
-      alt_name: "HackerRank",
-      color_code: "#000000",
-    },
-    {
-      title: "Certificate of Merit",
-      subtitle: "Summer Analytics | IIT Guwahati",
-      logo_path: "iitg-01.png",
+      title: "Access Denied'21",
+      subtitle: "IETE-VIT Vellore",
+      logo_path: "vitlogo.png",
       certificate_link:
-        "https://www.coursera.org/account/accomplishments/verify/22MTSSC5WDTM",
-      alt_name: "IITG",
+        "https://verify.givemycertificate.com/verify/YC74-G7DR-CKQS-QJ7K",
+      alt_name: "VIT",
       color_code: "#000000",
     },
     {
-      title: "Tableau Desktop Qualified Associate",
-      subtitle: "SimpliLearn",
-      logo_path: "simplilearn-01.png",
-      certificate_link:
-        "https://www.coursera.org/account/accomplishments/verify/22MTSSC5WDTM",
-      alt_name: "Simplilearn",
-      color_code: "#000000",
-    },
-    {
-      title: "Question Generation using Transformers",
-      subtitle: "Udemy",
-      logo_path: "udemy-01.png",
-      certificate_link:
-        "https://www.udemy.com/certificate/UC-b17c4c21-91e3-4f8b-b9c2-259468910985/",
-      alt_name: "Udemy",
-      color_code: "#000000",
-    },
-    {
-      title: "Machine Learning",
-      subtitle: "Stanford University",
-      logo_path: "coursera-01.png",
-      certificate_link:
-        "https://www.coursera.org/account/accomplishments/verify/22MTSSC5WDTM",
-      alt_name: "Stanford University",
-      color_code: "#000000",
-    },
-    {
-      title: "Data Visualization",
-      subtitle: "University of Michigan",
-      logo_path: "coursera-01.png",
-      certificate_link:
-        "https://www.coursera.org/account/accomplishments/verify/22MTSSC5WDTM",
-      alt_name: "University of Michigan",
-      color_code: "#000000",
-    },
-    {
-      title: "Data Scientist Career Track",
+      title: "Data Science for Everyone",
       subtitle: "DataCamp",
       logo_path: "datacamp-01.png",
       certificate_link:
-        "https://www.datacamp.com/statement-of-accomplishment/track/29f2ddab3fbfd0a470713a19c729c0f9d89c88aa",
+        "https://www.datacamp.com/statement-of-accomplishment/course/3bb303e6599e4cc83068f6b2e06347fba7e3b567",
       alt_name: "DataCamp",
+      color_code: "#000000",
+    },
+    {
+      title: "Python ",
+      subtitle: "HackerRank",
+      logo_path: "python-01.png",
+      certificate_link: "https://www.hackerrank.com/jatinkaushik_?hr_r=1",
+      alt_name: "HackerRank",
+      color_code: "#000000",
+    },
+    {
+      title: "Python Basic",
+      subtitle: "HackerRank",
+      logo_path: "hck.png",
+      certificate_link: "https://www.hackerrank.com/certificates/c2e799452876",
+      alt_name: "HackerRank",
+      color_code: "#000000",
+    },
+    {
+      title: "Rest API(Intermediate)",
+      subtitle: "HackerRank",
+      logo_path: "hck.png",
+      certificate_link: "https://www.hackerrank.com/certificates/28339364775b",
+      alt_name: "HackerRank",
+      color_code: "#000000",
+    },
+    {
+      title: "Python for Data Science",
+      subtitle: "iNeuron.ai",
+      logo_path: "ineuron-01.png",
+      certificate_link:
+        "https://academy.ineuron.ai/certificates/downloads/PY000156.pdf",
+      alt_name: "HackerRank",
+      color_code: "#000000",
+    },
+    {
+      title: "Machine Learning Masters",
+      subtitle: "iNeuron.ai",
+      logo_path: "ineuron-01.png",
+      certificate_link:
+        "https://academy.ineuron.ai/certificates/downloads/ML005036.pdf",
+      alt_name: "HackerRank",
       color_code: "#000000",
     },
     {
@@ -628,7 +623,7 @@ const certifications = {
       subtitle: "iNeuron.ai",
       logo_path: "ineuron-01.png",
       certificate_link:
-        "https://academy.ineuron.ai/certificates/downloads/PB009929.pdf",
+        "https://academy.ineuron.ai/certificates/downloads/PB012042.pdf",
       alt_name: "HackerRank",
       color_code: "#000000",
     },
@@ -637,7 +632,7 @@ const certifications = {
       subtitle: "iNeuron.ai",
       logo_path: "ineuron-01.png",
       certificate_link:
-        "https://academy.ineuron.ai/certificates/downloads/TB000634.pdf",
+        "https://academy.ineuron.ai/certificates/downloads/TB003355.pdf",
       alt_name: "HackerRank",
       color_code: "#000000",
     },
@@ -650,7 +645,7 @@ const contactPageData = {
     title: "Contact Me",
     profile_image_path: "contact.jpg",
     description:
-      "I am available on almost every social media. You can message me, I will reply within 24 hours. I can help you with ML, AI, React, Cloud and Opensource Development.",
+      "I am available on almost every social media. You can message me, I will reply within 24 hours. I can help you with ML, AI, Python, Flask, visualization Libraries, Tools and Opensource Development.",
   },
   addressSection: {
     title: "Address",
