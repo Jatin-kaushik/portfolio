@@ -10,7 +10,7 @@ const seo = {
   og: {
     title: "Jatin Portfolio",
     type: "website",
-    url: "http://jatinkaushik.ml/",
+    url: "http://jatinkaushik.tk/",
   },
 };
 
