@@ -15,12 +15,14 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.035);
+  background: rgba(255, 255, 255, 0.04);
   border: 1px solid var(--border);
-  font-size: 20px;
+  /* Matches the ~61% mark-to-tile ratio used by the skill tiles. */
+  font-size: 26px;
+  line-height: 1;
   text-decoration: none;
   transition: transform 0.32s var(--ease), border-color 0.32s var(--ease),
     background 0.32s var(--ease), box-shadow 0.32s var(--ease);
@@ -31,4 +33,10 @@
   border-color: var(--accent);
   background: rgba(110, 139, 255, 0.12);
   box-shadow: 0 10px 24px -8px var(--accent-glow);
+}
+
+.competitive-sites-inline a svg {
+  display: block;
+  width: 1em;
+  height: 1em;
 }

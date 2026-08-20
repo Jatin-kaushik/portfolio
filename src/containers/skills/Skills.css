@@ -91,59 +91,9 @@
   background: linear-gradient(135deg, var(--accent), var(--accent-3));
 }
 
-/* ---------------- Technology marks ---------------- */
-
-.software-skills-main-div {
-  margin-bottom: 22px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid var(--border);
-}
-
-.dev-icons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.software-skill-inline {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 11px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid var(--border);
-  font-size: 20px;
-  cursor: default;
-  transition: transform 0.32s var(--ease), border-color 0.32s var(--ease),
-    background 0.32s var(--ease), box-shadow 0.32s var(--ease);
-  overflow: hidden;
-}
-
-/* Guard: some icon sets ship wordmark lockups that are far wider than they
-   are tall. Without this they spill out of the tile and over their neighbour. */
-.software-skill-inline svg {
-  max-width: 100%;
-  max-height: 100%;
-}
-
-/* logos-mysql-icon is the only MySQL mark that is a dolphin rather than a
-   "MySQL" wordmark, but its fills are hard-coded so `color` cannot reach it.
-   Lift it optically so it matches the weight of the solid marks beside it. */
-.software-skill-inline[name="MySQL"] svg {
-  filter: brightness(1.5) saturate(1.15);
-}
-
-.software-skill-inline:hover {
-  transform: translateY(-5px) scale(1.07);
-  border-color: var(--accent);
-  background: rgba(110, 139, 255, 0.13);
-  box-shadow: 0 10px 24px -8px var(--accent-glow);
-}
+/* Technology-mark tiles are styled in
+   components/softwareSkills/SoftwareSkill.css, which owns that component.
+   Duplicating them here caused the two files to override each other. */
 
 /* ---------------- Responsive ---------------- */
 
@@ -156,11 +106,5 @@
 @media (max-width: 520px) {
   .skill-card {
     padding: 24px 22px;
-  }
-
-  .software-skill-inline {
-    width: 37px;
-    height: 37px;
-    font-size: 18px;
   }
 }
