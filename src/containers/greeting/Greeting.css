@@ -129,79 +129,6 @@
   height: auto !important;
 }
 
-/* Floating tech marks around the illustration. */
-.hero__orbit {
-  position: absolute;
-  inset: 0;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  z-index: 2;
-  pointer-events: none;
-}
-
-.hero__orbit-item {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 15px;
-  background: rgba(16, 18, 26, 0.72);
-  border: 1px solid var(--border-strong);
-  backdrop-filter: blur(14px) saturate(160%);
-  -webkit-backdrop-filter: blur(14px) saturate(160%);
-  box-shadow: var(--shadow);
-  font-size: 25px;
-  pointer-events: auto;
-  cursor: default;
-  animation: hero-float 6.5s ease-in-out infinite;
-  transition: transform 0.35s var(--ease), border-color 0.35s var(--ease),
-    box-shadow 0.35s var(--ease);
-}
-
-.hero__orbit-item:hover {
-  transform: scale(1.16) translateY(-4px);
-  border-color: var(--accent);
-  box-shadow: 0 12px 34px -8px var(--accent-glow);
-}
-
-.hero__orbit-item:nth-child(1) {
-  top: 4%;
-  left: 2%;
-}
-.hero__orbit-item:nth-child(2) {
-  top: 20%;
-  right: 0%;
-}
-.hero__orbit-item:nth-child(3) {
-  top: 50%;
-  left: -4%;
-}
-.hero__orbit-item:nth-child(4) {
-  bottom: 20%;
-  right: 3%;
-}
-.hero__orbit-item:nth-child(5) {
-  bottom: 2%;
-  left: 16%;
-}
-.hero__orbit-item:nth-child(6) {
-  top: 34%;
-  right: 16%;
-}
-
-@keyframes hero-float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-13px);
-  }
-}
-
 /* ---------------- Trust strip ---------------- */
 
 .hero__companies {
@@ -262,13 +189,6 @@
     gap: 40px;
   }
 
-  /* The floating marks are positioned against a two-column hero. Once the
-     layout stacks they collide with the architecture card, so drop them --
-     the same logos already appear in the skills constellations below. */
-  .hero__orbit {
-    display: none;
-  }
-
   .hero__visual {
     order: -1;
     min-height: 300px;
@@ -286,12 +206,6 @@
 @media (max-width: 768px) {
   .hero {
     padding: 118px 0 30px;
-  }
-
-  .hero__orbit-item {
-    width: 42px;
-    height: 42px;
-    font-size: 21px;
   }
 
   .hero__actions .ds-btn {

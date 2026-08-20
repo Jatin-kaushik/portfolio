@@ -6,16 +6,6 @@ import Typewriter from "typewriter-effect";
 import CompetitiveSites from "../../components/competitiveSites/CompetitiveSites";
 import { useReveal } from "../../hooks/useReveal";
 
-/** Tech marks that float alongside the hero illustration. */
-const ORBIT = [
-  { icon: "ion-logo-python", color: "#3776AB", label: "Python" },
-  { icon: "simple-icons:fastapi", color: "#009688", label: "FastAPI" },
-  { icon: "simple-icons:amazonaws", color: "#FF9900", label: "AWS" },
-  { icon: "simple-icons:apachekafka", color: "#FFFFFF", label: "Kafka" },
-  { icon: "simple-icons:docker", color: "#2496ED", label: "Docker" },
-  { icon: "simple-icons:kubernetes", color: "#326CE5", label: "Kubernetes" },
-];
-
 export default function Greeting() {
   const [ref, visible] = useReveal({ threshold: 0.05 });
 
@@ -117,24 +107,6 @@ export default function Greeting() {
             <div className="hero__lottie">
               <ArchitectureVisual />
             </div>
-
-            <ul className="hero__orbit" aria-label="Core technologies">
-              {ORBIT.map((tech, i) => (
-                <li
-                  key={tech.label}
-                  className="hero__orbit-item"
-                  style={{ animationDelay: `${i * 0.42}s` }}
-                  title={tech.label}
-                >
-                  <span
-                    className="iconify"
-                    data-icon={tech.icon}
-                    style={{ color: tech.color }}
-                    data-inline="false"
-                  />
-                </li>
-              ))}
-            </ul>
           </div>
         </div>
 
