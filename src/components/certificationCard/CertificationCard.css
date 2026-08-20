@@ -68,3 +68,28 @@
   opacity: 1;
   transform: none;
 }
+
+/* Typographic mark used when an issuer has no logo file. */
+.cert-header--mark {
+  background: linear-gradient(
+    145deg,
+    rgba(110, 139, 255, 0.13),
+    rgba(168, 85, 247, 0.07)
+  );
+}
+
+.cert-mark {
+  font-size: 1.12rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  text-align: center;
+  line-height: 1.25;
+  color: var(--accent-soft);
+  padding: 0 10px;
+  transition: transform 0.45s var(--ease), color 0.45s var(--ease);
+}
+
+.cert-card:hover .cert-mark {
+  transform: scale(1.05);
+  color: #cdd8ff;
+}

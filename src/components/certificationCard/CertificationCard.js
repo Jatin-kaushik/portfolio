@@ -24,13 +24,23 @@ export default function CertificationCard({ certificate, index = 0 }) {
       } ${hasLink ? "is-linked" : ""}`}
       style={{ transitionDelay: `${(index % 4) * 60}ms` }}
     >
-      <div className="cert-header">
-        <img
-          className="logo_img"
-          src={require(`../../assets/certificates/${certificate.logo_path}`)}
-          alt={certificate.alt_name}
-          loading="lazy"
-        />
+      <div
+        className={`cert-header ${
+          certificate.logo_path ? "" : "cert-header--mark"
+        }`}
+      >
+        {certificate.logo_path ? (
+          <img
+            className="logo_img"
+            src={require(`../../assets/certificates/${certificate.logo_path}`)}
+            alt={certificate.alt_name}
+            loading="lazy"
+          />
+        ) : (
+          // No logo file for this issuer: render a typographic mark instead of
+          // a stand-in bitmap, which read as clip-art beside the real logos.
+          <span className="cert-mark">{certificate.alt_name}</span>
+        )}
       </div>
 
       <div className="cert-body">

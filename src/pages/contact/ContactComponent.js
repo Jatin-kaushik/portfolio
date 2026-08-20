@@ -5,17 +5,14 @@ import TopButton from "../../components/topButton/TopButton";
 import Aurora from "../../components/aurora/Aurora";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import "./ContactComponent.css";
-import { contactPageData, socialMediaLinks } from "../../portfolio.js";
+import { contactPageData } from "../../portfolio.js";
 
 const ContactData = contactPageData.contactSection;
 const addressSection = contactPageData.addressSection;
-const phoneSection = contactPageData.phoneSection;
+const linkedinSection = contactPageData.linkedinSection;
+const emailSection = contactPageData.emailSection;
 
-const mailLink =
-  (socialMediaLinks.find((l) => l.name === "Gmail") || {}).link ||
-  "mailto:jatinchandkaushik@gmail.com";
-
-const email = mailLink.replace("mailto:", "");
+// The phone number is intentionally not shown on the public site.
 
 class Contact extends Component {
   render() {
@@ -40,7 +37,10 @@ class Contact extends Component {
                 <p className="ds-lead">{ContactData.description}</p>
 
                 <div className="contact-actions">
-                  <a className="ds-btn ds-btn--primary" href={mailLink}>
+                  <a
+                    className="ds-btn ds-btn--primary"
+                    href={emailSection.link}
+                  >
                     Drop a mail
                     <svg
                       width="15"
@@ -57,6 +57,14 @@ class Contact extends Component {
                       <path d="M4 7l8 6 8-6" />
                     </svg>
                   </a>
+                  <a
+                    className="ds-btn ds-btn--ghost"
+                    href={linkedinSection.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View resume on LinkedIn
+                  </a>
                 </div>
 
                 <div className="contact-social">
@@ -66,24 +74,31 @@ class Contact extends Component {
 
               {/* ---------- Details ---------- */}
               <div className="contact-cards">
-                <div className="contact-card ds-glass ds-glass--interactive">
-                  <span className="contact-card__label">Email</span>
-                  <a className="contact-card__value" href={mailLink}>
-                    {email}
-                  </a>
-                </div>
-
-                <div className="contact-card ds-glass ds-glass--interactive">
+                <a
+                  className="contact-card ds-glass ds-glass--interactive"
+                  href={emailSection.link}
+                >
                   <span className="contact-card__label">
-                    {phoneSection.title}
+                    {emailSection.title}
                   </span>
-                  <a
-                    className="contact-card__value"
-                    href={`tel:${phoneSection.subtitle.replace(/\s/g, "")}`}
-                  >
-                    {phoneSection.subtitle}
-                  </a>
-                </div>
+                  <span className="contact-card__value">
+                    {emailSection.subtitle}
+                  </span>
+                </a>
+
+                <a
+                  className="contact-card ds-glass ds-glass--interactive"
+                  href={linkedinSection.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="contact-card__label">
+                    {linkedinSection.title}
+                  </span>
+                  <span className="contact-card__value">
+                    {linkedinSection.subtitle}
+                  </span>
+                </a>
 
                 <div className="contact-card ds-glass ds-glass--interactive">
                   <span className="contact-card__label">

@@ -19,8 +19,7 @@ const greeting = {
   title: "Namaste!",
   sub: "Jatin Kaushik",
   logo_name: "Jatin Kaushik",
-  resumeLink:
-    "https://www.linkedin.com/in/jatin-kaushik/detail/overlay-view/urn:li:fsd_profileTreasuryMedia:(ACoAADDQg8QBf9pFUi61iKiGqe_lfNOzWaOZueI,1635460507931)/",
+  resumeLink: "https://www.linkedin.com/in/jatin-kaushik/",
 };
 
 // Headline numbers - animated counters on the home page.
@@ -77,7 +76,7 @@ const highlights = [
     body:
       "Re-architected the messaging backbone behind the Australian Open, Roland Garros and Formula-E, cutting annual cloud spend by roughly 90% while holding 99.9% uptime.",
     stack: ["NATS", "AWS ECS", "Kafka", "Hazelcast"],
-    icon: "simple-icons:natsdotio",
+    icon: "simple-icons:apachekafka",
   },
   {
     tag: "Platform",
@@ -85,7 +84,7 @@ const highlights = [
     body:
       "A FastAPI platform connecting global automotive customers with Professional Services and engineering teams, accelerating issue resolution across organisations.",
     stack: ["FastAPI", "PostgreSQL", "Agentic AI", "Rovo"],
-    icon: "simple-icons:jira",
+    icon: "simple-icons:fastapi",
   },
   {
     tag: "Security",
@@ -93,7 +92,7 @@ const highlights = [
     body:
       "AES-256 and RSA cryptography for multi-tenant SaaS, delivering GDPR/CCPA-compliant handling of sensitive customer data at 1M+ daily transactions.",
     stack: ["AES-256", "RSA", "JWT", "RBAC"],
-    icon: "simple-icons:letsencrypt",
+    icon: "simple-icons:springsecurity",
   },
 ];
 
@@ -170,7 +169,6 @@ const skills = {
           skillName: "Python",
           fontAwesomeClassname: "ion-logo-python",
           style: {
-            backgroundColor: "transparent",
             color: "#3776AB",
           },
         },
@@ -182,17 +180,38 @@ const skills = {
           },
         },
         {
-          skillName: "Java",
-          fontAwesomeClassname: "logos-java",
+          skillName: "Flask",
+          fontAwesomeClassname: "simple-icons:flask",
           style: {
-            backgroundColor: "transparent",
+            color: "#E8EAF0",
+          },
+        },
+        {
+          skillName: "Java",
+          fontAwesomeClassname: "simple-icons:openjdk",
+          style: {
+            color: "#E8EAF0",
+          },
+        },
+        {
+          skillName: "Spring Boot",
+          fontAwesomeClassname: "simple-icons:springboot",
+          style: {
+            color: "#6DB33F",
           },
         },
         {
           skillName: "PostgreSQL",
           fontAwesomeClassname: "simple-icons:postgresql",
           style: {
-            color: "#336791",
+            color: "#5A9BD5",
+          },
+        },
+        {
+          skillName: "MySQL",
+          fontAwesomeClassname: "simple-icons:mysql",
+          style: {
+            color: "#7BB6DB",
           },
         },
         {
@@ -206,15 +225,7 @@ const skills = {
           skillName: "Apache Kafka",
           fontAwesomeClassname: "simple-icons:apachekafka",
           style: {
-            // Brand black (#231F20) is invisible on the dark tiles.
             color: "#E8EAF0",
-          },
-        },
-        {
-          skillName: "Redis",
-          fontAwesomeClassname: "simple-icons:redis",
-          style: {
-            color: "#DC382D",
           },
         },
         {
@@ -222,6 +233,13 @@ const skills = {
           fontAwesomeClassname: "simple-icons:rabbitmq",
           style: {
             color: "#FF6600",
+          },
+        },
+        {
+          skillName: "Redis",
+          fontAwesomeClassname: "simple-icons:redis",
+          style: {
+            color: "#DC382D",
           },
         },
       ],
@@ -249,7 +267,6 @@ const skills = {
           skillName: "LangChain",
           fontAwesomeClassname: "simple-icons:langchain",
           style: {
-            // Brand teal (#1C3C3C) is too dark against the dark tiles.
             color: "#4FD1B5",
           },
         },
@@ -257,30 +274,28 @@ const skills = {
           skillName: "OpenAI",
           fontAwesomeClassname: "simple-icons:openai",
           style: {
-            // Brand violet (#412991) is too dark against the dark tiles.
             color: "#E8EAF0",
-          },
-        },
-        {
-          skillName: "Tensorflow",
-          fontAwesomeClassname: "logos-tensorflow",
-          style: {
-            backgroundColor: "transparent",
-          },
-        },
-        {
-          skillName: "PyTorch",
-          fontAwesomeClassname: "simple-icons:pytorch",
-          style: {
-            backgroundColor: "transparent",
           },
         },
         {
           skillName: "Python",
           fontAwesomeClassname: "ion-logo-python",
           style: {
-            backgroundColor: "transparent",
             color: "#3776AB",
+          },
+        },
+        {
+          skillName: "FastAPI",
+          fontAwesomeClassname: "simple-icons:fastapi",
+          style: {
+            color: "#009688",
+          },
+        },
+        {
+          skillName: "Pydantic",
+          fontAwesomeClassname: "simple-icons:pydantic",
+          style: {
+            color: "#E92063",
           },
         },
       ],
@@ -333,6 +348,27 @@ const skills = {
           },
         },
         {
+          skillName: "Git",
+          fontAwesomeClassname: "simple-icons:git",
+          style: {
+            color: "#F05032",
+          },
+        },
+        {
+          skillName: "GitHub Actions",
+          fontAwesomeClassname: "simple-icons:githubactions",
+          style: {
+            color: "#2088FF",
+          },
+        },
+        {
+          skillName: "NGINX",
+          fontAwesomeClassname: "simple-icons:nginx",
+          style: {
+            color: "#009639",
+          },
+        },
+        {
           skillName: "Grafana",
           fontAwesomeClassname: "simple-icons:grafana",
           style: {
@@ -340,10 +376,10 @@ const skills = {
           },
         },
         {
-          skillName: "Github",
-          fontAwesomeClassname: "simple-icons:github",
+          skillName: "Prometheus",
+          fontAwesomeClassname: "simple-icons:prometheus",
           style: {
-            color: "#CB3837",
+            color: "#E6522C",
           },
         },
       ],
@@ -371,14 +407,27 @@ const skills = {
           skillName: "PyTorch",
           fontAwesomeClassname: "simple-icons:pytorch",
           style: {
-            backgroundColor: "transparent",
+            color: "#EE4C2C",
+          },
+        },
+        {
+          skillName: "scikit-learn",
+          fontAwesomeClassname: "simple-icons:scikitlearn",
+          style: {
+            color: "#F7931E",
+          },
+        },
+        {
+          skillName: "OpenCV",
+          fontAwesomeClassname: "simple-icons:opencv",
+          style: {
+            color: "#5C3EE8",
           },
         },
         {
           skillName: "Python",
           fontAwesomeClassname: "ion-logo-python",
           style: {
-            backgroundColor: "transparent",
             color: "#3776AB",
           },
         },
@@ -386,8 +435,7 @@ const skills = {
           skillName: "Pandas",
           fontAwesomeClassname: "simple-icons:pandas",
           style: {
-            backgroundColor: "transparent",
-            color: "#3776AB",
+            color: "#C5C8D1",
           },
         },
         {
@@ -401,7 +449,7 @@ const skills = {
           skillName: "Tableau",
           fontAwesomeClassname: "simple-icons:tableau",
           style: {
-            backgroundColor: "transparent",
+            color: "#E97627",
           },
         },
       ],
@@ -488,28 +536,28 @@ const skills = {
           skillName: "Tableau",
           fontAwesomeClassname: "simple-icons:tableau",
           style: {
-            color: "#FF2BC2",
-          },
-        },
-        {
-          skillName: "Python-Dash",
-          fontAwesomeClassname: "simple-icons:python",
-          style: {
-            color: "#FF7C00",
+            color: "#E97627",
           },
         },
         {
           skillName: "Plotly",
           fontAwesomeClassname: "simple-icons:plotly",
           style: {
-            color: "#2fa3f7",
+            color: "#2FA3F7",
           },
         },
         {
-          skillName: "Python-Matplotlib",
-          fontAwesomeClassname: "simple-icons:python",
+          skillName: "Python-Dash",
+          fontAwesomeClassname: "ion-logo-python",
           style: {
-            color: "#81FBBB",
+            color: "#3776AB",
+          },
+        },
+        {
+          skillName: "Pandas",
+          fontAwesomeClassname: "simple-icons:pandas",
+          style: {
+            color: "#C5C8D1",
           },
         },
       ],
@@ -911,7 +959,7 @@ const resumeright = {
         },
         {
           title: "Portfolio Website",
-          subtitle: "Jatinkaushik.tk",
+          subtitle: "Personal project",
           content: [
             "Built a personal Portfolio Website with the help or @rohanKokkula and @mohitnegi",
           ],
@@ -925,13 +973,13 @@ const resumeright = {
 const certifications = {
   certifications: [
     // --- Added from latest resume (Aug 2026) ---
-    // NOTE: logos below are plain generated text badges in the issuer's brand
-    // colour, not official brand marks. Swap in real logo files if you have them.
-    // certificate_link is empty where no public verification URL was available.
+    // These entries have no logo file, so the card renders a typographic mark
+    // built from the issuer name. certificate_link is empty where no public
+    // verification URL was available -- add one and a "Verify" action appears.
     {
       title: "AWS Certified Cloud Practitioner",
       subtitle: "Amazon Web Services",
-      logo_path: "aws-cert.png",
+      logo_path: "",
       certificate_link: "",
       alt_name: "AWS",
       color_code: "#000000",
@@ -939,7 +987,7 @@ const certifications = {
     {
       title: "GCP Certified Cloud Practitioner",
       subtitle: "Google Cloud",
-      logo_path: "gcp-cert.png",
+      logo_path: "",
       certificate_link: "",
       alt_name: "Google Cloud",
       color_code: "#000000",
@@ -947,7 +995,7 @@ const certifications = {
     {
       title: "Generative AI & Prompt Engineering",
       subtitle: "AI / ML",
-      logo_path: "genai-cert.png",
+      logo_path: "",
       certificate_link: "",
       alt_name: "Generative AI",
       color_code: "#000000",
@@ -955,7 +1003,7 @@ const certifications = {
     {
       title: "GitHub Foundations Certification",
       subtitle: "GitHub",
-      logo_path: "github-cert.png",
+      logo_path: "",
       certificate_link: "",
       alt_name: "GitHub",
       color_code: "#000000",
@@ -963,7 +1011,7 @@ const certifications = {
     {
       title: "Infosys Certified Software Engineer",
       subtitle: "Infosys",
-      logo_path: "infosys-cert.png",
+      logo_path: "",
       certificate_link: "",
       alt_name: "Infosys",
       color_code: "#000000",
@@ -1082,16 +1130,25 @@ const contactPageData = {
     title: "Contact Me",
     profile_image_path: "contact.jpg",
     description:
-      "I am available on almost every social media. You can message me, I will reply within 24 hours. I can help you with Python backend engineering, FastAPI, Generative AI & LLM applications, RAG and Agentic AI systems, AWS & cloud architecture, microservices and event-driven design, as well as ML, visualization libraries, tools and Opensource Development.",
+      "Happy to talk about Python backend engineering, FastAPI, Generative AI and LLM applications, RAG and Agentic AI systems, AWS and cloud architecture, or event-driven microservice design. I usually reply within 24 hours.",
   },
   addressSection: {
-    title: "Address",
-    subtitle: "Rohini Sector-37, New Delhi-110086",
+    title: "Location",
+    subtitle: "Rohini Sector 22, Delhi",
   },
-  phoneSection: {
-    title: "Phone Number",
-    subtitle: "+91 8826599252",
+  linkedinSection: {
+    title: "LinkedIn",
+    subtitle: "linkedin.com/in/jatin-kaushik",
+    link: "https://www.linkedin.com/in/jatin-kaushik/",
   },
+  emailSection: {
+    title: "Email",
+    subtitle: "Jatinchandkaushik@gmail.com",
+    link: "mailto:Jatinchandkaushik@gmail.com",
+  },
+  // Phone number intentionally omitted from the public site. Anything left in
+  // this file ships inside the JS bundle and is readable from view-source,
+  // so it is removed rather than merely hidden from the UI.
 };
 
 //contact icons
