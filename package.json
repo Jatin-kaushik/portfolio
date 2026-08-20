@@ -38,7 +38,7 @@
     "styled-components": "^5.1.1",
     "styletron-engine-atomic": "^1.4.6",
     "styletron-react": "^5.2.7",
-    "typewriter-effect": "^2.18.0"
+    "typewriter-effect": "2.18.0"
   },
   "devDependencies": {
     "@iconify/icons-logos": "^1.0.9",

@@ -10,7 +10,7 @@ const seo = {
   og: {
     title: "Jatin Kaushik | Senior Backend & AI Engineer",
     type: "website",
-    url: "http://jatinkaushik.tk/",
+    url: "https://jatinkaushik.netlify.app/",
   },
 };
 
