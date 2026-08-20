@@ -4,11 +4,11 @@ const settings = {
 
 //SEO Related settings
 const seo = {
-  title: "Jatin Kaushik | Portfolio",
+  title: "Jatin Kaushik | Senior Backend & AI Engineer",
   description:
-    "I am an enthusiastic, Passionate, Highly motivated and Self-driven Engineering student with Interest in Data Science, Analytics and Programming with Strong background in Python and knowledge of various types of machine learning and deep learning techniques.",
+    "Senior Backend AI Engineer with 6+ years of experience designing and scaling Python backend systems, Generative AI applications and distributed microservices on AWS and Azure. Specialised in FastAPI, LLMs, RAG pipelines, Agentic AI, AWS Bedrock and event-driven architectures built on Kafka, NATS, RabbitMQ and Redis.",
   og: {
-    title: "Jatin Portfolio",
+    title: "Jatin Kaushik | Senior Backend & AI Engineer",
     type: "website",
     url: "http://jatinkaushik.tk/",
   },
@@ -79,6 +79,197 @@ const competitiveSites = {
 //what i do?
 const skills = {
   data: [
+    {
+      title: "Backend & API Engineering",
+      fileName: "FullStackImg",
+      skills: [
+        "\u26A1 Designing and scaling production Python backend systems with FastAPI, Flask and Pydantic serving millions of users",
+        "\u26A1 Building secure RESTful APIs with JWT authentication, RBAC, API versioning, validation frameworks and audit logging",
+        "\u26A1 Architecting event-driven microservices with Kafka, NATS, RabbitMQ, AWS SQS and Redis for high-throughput asynchronous workloads",
+        "\u26A1 Modernizing legacy monoliths into modular, independently deployable microservice architectures",
+        "\u26A1 Optimizing PostgreSQL, MongoDB and DynamoDB schemas, indexing and queries for 1M+ daily transactions at sub-100ms latency",
+        "\u26A1 Implementing backpressure handling, in-memory queuing and circuit-breaker patterns for 10K+ events per second",
+      ],
+      softwareSkills: [
+        {
+          skillName: "Python",
+          fontAwesomeClassname: "ion-logo-python",
+          style: {
+            backgroundColor: "transparent",
+            color: "#3776AB",
+          },
+        },
+        {
+          skillName: "FastAPI",
+          fontAwesomeClassname: "simple-icons:fastapi",
+          style: {
+            color: "#009688",
+          },
+        },
+        {
+          skillName: "Java",
+          fontAwesomeClassname: "logos-java",
+          style: {
+            backgroundColor: "transparent",
+          },
+        },
+        {
+          skillName: "PostgreSQL",
+          fontAwesomeClassname: "simple-icons:postgresql",
+          style: {
+            color: "#336791",
+          },
+        },
+        {
+          skillName: "MongoDB",
+          fontAwesomeClassname: "simple-icons:mongodb",
+          style: {
+            color: "#47A248",
+          },
+        },
+        {
+          skillName: "Apache Kafka",
+          fontAwesomeClassname: "simple-icons:apachekafka",
+          style: {
+            color: "#231F20",
+          },
+        },
+        {
+          skillName: "Redis",
+          fontAwesomeClassname: "simple-icons:redis",
+          style: {
+            color: "#DC382D",
+          },
+        },
+        {
+          skillName: "RabbitMQ",
+          fontAwesomeClassname: "simple-icons:rabbitmq",
+          style: {
+            color: "#FF6600",
+          },
+        },
+      ],
+    },
+    {
+      title: "Generative AI & LLM Engineering",
+      fileName: "DataScienceImg",
+      skills: [
+        "\u26A1 Building production Generative AI platforms on AWS Bedrock with LLM orchestration and multi-chunk processing frameworks",
+        "\u26A1 Designing RAG pipelines over enterprise knowledge bases using embeddings, vector databases and semantic retrieval",
+        "\u26A1 Developing Agentic AI systems that automate code review, test-case generation and operational workflows",
+        "\u26A1 Prompt engineering and LLM evaluation for accuracy, latency and cost across enterprise use cases",
+        "\u26A1 Shipped a GenAI Commentary Chatbot processing millions of match records with 95% accuracy in under 15 seconds",
+        "\u26A1 Integrating AI-assisted development workflows with GitHub Copilot, Kiro and Atlassian Rovo Agents",
+      ],
+      softwareSkills: [
+        {
+          skillName: "AWS Bedrock",
+          fontAwesomeClassname: "simple-icons:amazonaws",
+          style: {
+            color: "#FF9900",
+          },
+        },
+        {
+          skillName: "LangChain",
+          fontAwesomeClassname: "simple-icons:langchain",
+          style: {
+            color: "#1C3C3C",
+          },
+        },
+        {
+          skillName: "OpenAI",
+          fontAwesomeClassname: "simple-icons:openai",
+          style: {
+            color: "#412991",
+          },
+        },
+        {
+          skillName: "Tensorflow",
+          fontAwesomeClassname: "logos-tensorflow",
+          style: {
+            backgroundColor: "transparent",
+          },
+        },
+        {
+          skillName: "PyTorch",
+          fontAwesomeClassname: "logos-pytorch",
+          style: {
+            backgroundColor: "transparent",
+          },
+        },
+        {
+          skillName: "Python",
+          fontAwesomeClassname: "ion-logo-python",
+          style: {
+            backgroundColor: "transparent",
+            color: "#3776AB",
+          },
+        },
+      ],
+    },
+    {
+      title: "Cloud, DevOps & Distributed Systems",
+      fileName: "DesignImg",
+      skills: [
+        "\u26A1 Architecting cloud-native systems on AWS (Lambda, ECS, ECR, S3, RDS, EC2, Kinesis, Bedrock) and Azure DevOps",
+        "\u26A1 Containerization and orchestration with Docker and Kubernetes, plus CI/CD via Jenkins, GitHub Actions and Azure Pipelines",
+        "\u26A1 Driving large-scale cloud cost optimization \u2014 reduced annual spend from $31K to $3K (~90%) at 99.9% uptime",
+        "\u26A1 Implementing PII encryption with AES-256 and RSA for GDPR/CCPA compliance in multi-tenant platforms",
+        "\u26A1 Observability and monitoring using CloudWatch, ELK Stack, Grafana and Prometheus",
+        "\u26A1 Performance tuning and capacity planning across compute, messaging and database layers",
+      ],
+      softwareSkills: [
+        {
+          skillName: "AWS",
+          fontAwesomeClassname: "simple-icons:amazonaws",
+          style: {
+            color: "#FF9900",
+          },
+        },
+        {
+          skillName: "Azure",
+          fontAwesomeClassname: "simple-icons:microsoftazure",
+          style: {
+            color: "#0089D6",
+          },
+        },
+        {
+          skillName: "Docker",
+          fontAwesomeClassname: "simple-icons:docker",
+          style: {
+            color: "#2496ED",
+          },
+        },
+        {
+          skillName: "Kubernetes",
+          fontAwesomeClassname: "simple-icons:kubernetes",
+          style: {
+            color: "#326CE5",
+          },
+        },
+        {
+          skillName: "Jenkins",
+          fontAwesomeClassname: "simple-icons:jenkins",
+          style: {
+            color: "#D24939",
+          },
+        },
+        {
+          skillName: "Grafana",
+          fontAwesomeClassname: "simple-icons:grafana",
+          style: {
+            color: "#F46800",
+          },
+        },
+        {
+          skillName: "Github",
+          fontAwesomeClassname: "simple-icons:github",
+          style: {
+            color: "#CB3837",
+          },
+        },
+      ],
+    },
     {
       title: "Data Science & Analysis",
       fileName: "DataScienceImg",
@@ -454,16 +645,76 @@ const resumeleft = {
     title: ["Experience"],
     data: [
       {
-        title: "Data Science Intern",
-        subtitle: "ByteBlanket Software and Solutions",
-        date: "June 2020 - present",
+        title:
+          "Software Development Engineer II (SDE-2) | Python & AI Engineer",
+        subtitle: "HERE Technologies, Delhi, India",
+        date: "Feb 2026 - Present",
         content: [
-          "Face Expression Detector : As an intern, I was assigned to Data Science team and assigned project to create a fast and scalable solution for Expression Detection using facial recognition.",
-          "Face Recognition System : As an intern, I was assigned to Data Science team and assigned project to create a fast and scalable solution for authentication using facial recognition.",
-          "Tableau Dashboards for Work Efficiency : Designed and created Tableau Dashboard to track and manage queries assigned, closed and pending and helps improve the work efficiency.",
-          "Merchant Web Dashboard : Created client facing web dashboard application using python, plotly and Dash to track and monitor inventory for merchants.",
-          "Chatbot Web App : Created Chatbot to provide order related answers to common customer queries.",
-          "Signature Verification for Fintech Client : Currently working on building a signature verification app using deep learning and CV techniques.",
+          "Architected and delivered the enterprise-scale JIRA Sync Platform using Python FastAPI, enabling seamless collaboration between global automotive customers, Professional Services teams and engineering organizations.",
+          "Designed and implemented Agentic AI solutions leveraging AWS Bedrock, Atlassian Studio Rovo, enterprise knowledge repositories and LLM-powered workflows to automate operational processes and accelerate decision-making.",
+          "Engineered intelligent Product Journey Dashboards for executive automotive leadership, integrating AWS Bedrock and LLMs to generate actionable insights and automate reporting.",
+          "Built an AI-powered Code Review and Quality Assurance Agent that analyses code changes, generates Zephyr Test Cases and streamlines testing workflows, improving release readiness.",
+          "Built enterprise-grade Performance and KPI Dashboards using Python Dash, Plotly, SQL and custom data pipelines, giving real-time visibility into CI/CD health, deployment metrics and engineering productivity.",
+          "Spearheaded modernization of a legacy monolithic Navigation Platform into a scalable modular architecture, improving maintainability, deployment velocity and long-term platform reliability.",
+          "Leveraged GitHub Copilot, Kiro and Atlassian Rovo Agents to implement AI-assisted development workflows, significantly reducing development effort across multiple strategic initiatives.",
+        ],
+      },
+      {
+        title: "Senior Software Engineer | Python Backend Developer",
+        subtitle: "Kellton Tech Solutions, Gurugram, India",
+        date: "Jun 2025 - Feb 2026",
+        content: [
+          "Architected a high-availability AI Content Generation Platform leveraging AWS Bedrock, LLMs and a custom multi-chunk processing framework, improving content generation throughput by 35%.",
+          "Designed enterprise-grade PII encryption and decryption frameworks using AES-256 and RSA cryptography, ensuring GDPR/CCPA compliance across multi-tenant environments.",
+          "Built scalable Python microservices using FastAPI, PostgreSQL and MongoDB, supporting dynamic survey workflows, asynchronous processing and complex business logic for enterprise SaaS applications.",
+          "Developed secure RESTful APIs with JWT authentication, Role-Based Access Control (RBAC), API versioning, validation frameworks and comprehensive audit logging.",
+          "Optimized database architecture, indexing strategies and query performance for high-volume analytics workloads, supporting 1M+ daily transactions at sub-100ms response times.",
+          "Implemented Redis caching and Apache Kafka event streaming for real-time survey processing and response ingestion for global users, reducing latency under peak traffic.",
+          "Enhanced CI/CD and deployment infrastructure using Azure DevOps, integrating automated quality gates through SonarQube, security validations and deployment health checks.",
+          "Designed an enterprise Insights & Reporting Dashboard for live survey analytics using Python, SQL and AI-powered review mechanisms delivering real-time response analysis and actionable business insights.",
+        ],
+      },
+      {
+        title: "Specialist Programmer | Backend Developer (SDE-1)",
+        subtitle: "Infosys, Bengaluru, India",
+        date: "Aug 2022 - May 2025",
+        content: [
+          "Led large-scale infrastructure modernization for global sporting events including Australian Open, Roland Garros, ATP Tours and Formula-E, migrating pipelines from RabbitMQ to NATS and optimizing AWS ECS, cutting annual cloud costs from $31K to $3K (~90%) while maintaining 99.9% uptime.",
+          "Architected a GenAI Commentary Chatbot for ATP using AWS Bedrock, AI Agents, Knowledge Bases and Python FastAPI, processing millions of historical match records to generate context-aware commentary in under 15 seconds with 95% accuracy.",
+          "Engineered and deployed 12 Java Spring Boot microservices on AWS Lambda, API Gateway and DynamoDB within 2.5 weeks, enabling real-time Augmented Reality (AR) fan experiences during live tournaments.",
+          "Redesigned sports data ingestion platforms using Apache Kafka and Hazelcast for Hawk-Eye data streams, improving ingestion efficiency by 60% and cutting processing latency from 5 seconds to under 500 milliseconds.",
+          "Resolved critical scalability bottlenecks using backpressure handling, in-memory queuing and circuit-breaker patterns, enabling reliable processing of 10K+ events per second with zero data-loss incidents.",
+          "Implemented an intelligent AWS S3 caching layer and optimized PostgreSQL RDS workloads, reducing database load from 100% CPU utilization to 4 ACU at peak and improving API response times by 70%.",
+          "Developed cloud-native Carbon Emissions Tracking Microservices for the Green Act Movement initiative, integrating third-party sustainability APIs and analytics dashboards.",
+          "Led performance tuning and capacity planning across distributed systems, improving throughput and reliability during peak tournament traffic.",
+        ],
+      },
+      {
+        title: "Data Science & Analytics Engineer | Backend Developer",
+        subtitle: "ByteBlanket Software and Solutions, Remote",
+        date: "Jun 2020 - Sept 2021",
+        content: [
+          "Developed ML algorithms using Python (scikit-learn, TensorFlow, OpenCV) for a fintech banking client, automating signature verification and facial recognition authentication with 92% and 95% accuracy, reducing manual verification workload by 50%.",
+          "Built a comprehensive Tableau Dashboard with Flask RESTful APIs for real-time ML model performance monitoring, reducing model degradation detection time by 80%.",
+          "Engineered high-performance Flask APIs with optimized payloads and cached responses, improving reporting speed by 60% with rate limiting and request batching.",
+          "Built robust ETL pipelines using pandas/NumPy to process large-scale financial datasets, implementing data validation and anomaly detection and reducing data-related errors by 40%.",
+          "Contributed to fraud detection models and loan approval systems using Random Forest, XGBoost and Logistic Regression, helping reduce fraudulent transactions by 25%.",
+          "Created interactive business intelligence dashboards using Tableau and Power BI for customer behaviour and transaction pattern analysis.",
+          "Face Expression Detector: built a fast and scalable solution for expression detection using facial recognition.",
+          "Merchant Web Dashboard: created a client-facing web dashboard using Python, Plotly and Dash to track and monitor merchant inventory.",
+          "Chatbot Web App: created a chatbot to answer common order-related customer queries.",
+          "Tableau Dashboards for Work Efficiency: designed Tableau dashboards to track and manage queries assigned, closed and pending, improving team work efficiency.",
+        ],
+      },
+      {
+        title: "Program Support Intern",
+        subtitle: "LetsUpgrade, Remote",
+        date: "Dec 2019 - May 2020",
+        content: [
+          "Collaborated with the engineering team to enhance the coding platform architecture, improving user engagement and platform stability for over 5,000+ active learners.",
+          "Developed Python-based automation scripts to streamline data entry and validation, reducing manual data processing time by 70% and ensuring 99% data integrity.",
+          "Optimized SQL queries and backend data structures for real-time tracking of student progress and assessment submissions, decreasing page load times by 30%.",
+          "Automated generation of performance reports and digital certificates, eliminating manual overhead for program coordinators.",
         ],
       },
     ],
@@ -477,16 +728,65 @@ const resumeright = {
       data: [
         {
           title:
-            "Bachelor of Engineering in Electronics and Communication Engineering",
-          subtitle: "HMR Institute of Technology and Management, New Delhi",
+            "Bachelor of Technology in Electronics and Communication Engineering",
+          subtitle: "Guru Gobind Singh Indraprastha University, New Delhi",
           date: "2018 - 2022",
-          content: ["Overall CGPA: 8.3/10"],
+          content: ["Overall GPA: 9.0/10"],
         },
         {
           title: "Higher Secondary School Certificate [HSSC]",
           subtitle: "Indraprastha Convent Sr. Secondary School, New Delhi",
           date: "2016 - 2018",
           content: ["CGPA: 7.6/10"],
+        },
+      ],
+    },
+    {
+      title: ["Technical Achievements"],
+      data: [
+        {
+          title: "AI Innovation Award",
+          subtitle: "HERE Technologies",
+          date: "Q2 2026",
+          content: [
+            "Recognized by senior leadership for delivering production-grade AI-powered enterprise automation initiatives using AWS Bedrock, Agentic AI workflows and intelligent engineering productivity solutions.",
+          ],
+        },
+        {
+          title: "Infrastructure Excellence",
+          content: [
+            "Achieved ~90% cloud cost optimization by redesigning AWS infrastructure and migrating messaging from RabbitMQ to NATS, cutting annual operating costs from $31K to $3K while maintaining 99.9% uptime.",
+          ],
+        },
+        {
+          title: "Generative AI Innovation",
+          content: [
+            "Architected and deployed an AWS Bedrock-powered ATP Commentary Portal and AI Chatbot, processing millions of historical match records and delivering AI-generated commentary with 95% accuracy during live international tournaments.",
+          ],
+        },
+        {
+          title: "Large-Scale Event Processing",
+          content: [
+            "Engineered distributed event-driven systems processing 10K+ events per second with fault tolerance, low latency and zero data-loss during peak tournament traffic.",
+          ],
+        },
+        {
+          title: "Enterprise Security Excellence",
+          content: [
+            "Implemented AES-256 and RSA-based encryption frameworks ensuring GDPR/CCPA compliance and secure handling of sensitive customer data across multi-tenant platforms.",
+          ],
+        },
+        {
+          title: "Global Sports Technology Impact",
+          content: [
+            "Delivered mission-critical systems supporting the Australian Open, Roland Garros, ATP Tours and Formula-E, serving millions of global users with high availability and real-time data processing.",
+          ],
+        },
+        {
+          title: "Technical Leadership",
+          content: [
+            "Led architecture modernization, AI adoption initiatives and cloud transformation programs while mentoring engineers across Python, FastAPI, cloud-native development and modern software engineering practices.",
+          ],
         },
       ],
     },
@@ -504,8 +804,12 @@ const resumeright = {
           title: "Achievements",
           content: [
             "LinkedIn Python Assessmment Certified",
-            "4⭐ Badges for Python, Python and RestAPI Certified at HackerRank ",
+            "4\u2B50 Badges for Python, Python and RestAPI Certified at HackerRank ",
             "Cleared Infosys Certification for Certified Software Engineer",
+            "AWS Certified Cloud Practitioner",
+            "GCP Certified Cloud Practitioner",
+            "GitHub Foundations Certified",
+            "Generative AI & Prompt Engineering Certified",
           ],
         },
       ],
@@ -542,6 +846,59 @@ const resumeright = {
 //certificate cards
 const certifications = {
   certifications: [
+    // --- Added from latest resume (Aug 2026) ---
+    // NOTE: logos below are plain generated text badges in the issuer's brand
+    // colour, not official brand marks. Swap in real logo files if you have them.
+    // certificate_link is empty where no public verification URL was available.
+    {
+      title: "AWS Certified Cloud Practitioner",
+      subtitle: "Amazon Web Services",
+      logo_path: "aws-cert.png",
+      certificate_link: "",
+      alt_name: "AWS",
+      color_code: "#000000",
+    },
+    {
+      title: "GCP Certified Cloud Practitioner",
+      subtitle: "Google Cloud",
+      logo_path: "gcp-cert.png",
+      certificate_link: "",
+      alt_name: "Google Cloud",
+      color_code: "#000000",
+    },
+    {
+      title: "Generative AI & Prompt Engineering",
+      subtitle: "AI / ML",
+      logo_path: "genai-cert.png",
+      certificate_link: "",
+      alt_name: "Generative AI",
+      color_code: "#000000",
+    },
+    {
+      title: "GitHub Foundations Certification",
+      subtitle: "GitHub",
+      logo_path: "github-cert.png",
+      certificate_link: "",
+      alt_name: "GitHub",
+      color_code: "#000000",
+    },
+    {
+      title: "Infosys Certified Software Engineer",
+      subtitle: "Infosys",
+      logo_path: "infosys-cert.png",
+      certificate_link: "",
+      alt_name: "Infosys",
+      color_code: "#000000",
+    },
+    {
+      title: "Data Analyst (Power BI, Tableau)",
+      subtitle: "Data Analytics",
+      logo_path: "tabcon-01.png",
+      certificate_link: "",
+      alt_name: "Data Analyst",
+      color_code: "#000000",
+    },
+    // --- Existing certifications (unchanged) ---
     {
       title: "Python 101 for Data Science",
       subtitle: "Data Science",
@@ -647,7 +1004,7 @@ const contactPageData = {
     title: "Contact Me",
     profile_image_path: "contact.jpg",
     description:
-      "I am available on almost every social media. You can message me, I will reply within 24 hours. I can help you with ML, AI, Python, Flask, visualization Libraries, Tools and Opensource Development.",
+      "I am available on almost every social media. You can message me, I will reply within 24 hours. I can help you with Python backend engineering, FastAPI, Generative AI & LLM applications, RAG and Agentic AI systems, AWS & cloud architecture, microservices and event-driven design, as well as ML, visualization libraries, tools and Opensource Development.",
   },
   addressSection: {
     title: "Address",

@@ -1,0 +1,22 @@
+# Netlify build configuration
+#
+# This project runs Create React App 3.2 (webpack 4). Webpack 4 hashes with MD4,
+# which OpenSSL 3 rejects, so NODE_OPTIONS=--openssl-legacy-provider is required
+# on any modern Node version. Without it the build fails with
+# ERR_OSSL_EVP_UNSUPPORTED.
+
+[build]
+  command = "npm run build"
+  publish = "build"
+
+[build.environment]
+  NODE_VERSION = "20"
+  NODE_OPTIONS = "--openssl-legacy-provider"
+  # CRA treats warnings as errors when CI=true, which Netlify sets by default.
+  CI = "false"
+
+# SPA fallback so client-side routes resolve. Mirrors public/_redirects.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

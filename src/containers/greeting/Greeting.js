@@ -26,16 +26,25 @@ export default function Greeting(props) {
                 <Typewriter
                   onInit={(typewriter) => {
                     typewriter
+                      .typeString("Senior Backend AI Engineer")
+                      .pauseFor(200)
+                      .deleteAll()
+                      .typeString("Python & FastAPI Developer")
+                      .pauseFor(200)
+                      .deleteAll()
+                      .typeString("Generative AI & LLM Engineer")
+                      .pauseFor(200)
+                      .deleteAll()
+                      .typeString("Microservices Architect")
+                      .pauseFor(200)
+                      .deleteAll()
+                      .typeString("Cloud Engineer")
+                      .pauseFor(200)
+                      .deleteAll()
                       .typeString("Data Scientist ")
                       .pauseFor(200)
                       .deleteAll()
                       .typeString("Data Analyst")
-                      .pauseFor(200)
-                      .deleteAll()
-                      .typeString("Python Developer")
-                      .pauseFor(200)
-                      .deleteAll()
-                      .typeString("API Developer")
                       .pauseFor(200)
                       .deleteAll()
                       .typeString("ECE Engineer")
@@ -53,15 +62,15 @@ export default function Greeting(props) {
                 style={{ color: theme.text }}
               >
                 <div className="entities">
-                  A <mark data-entity="noun">Data Science practitioner</mark>{" "}
-                  who thrives to{" "}
-                  <mark data-entity="verb">leverage Startups</mark> using
-                  AI-based solutions along with{" "}
-                  <mark data-entity="skill">Python Development</mark> and a
-                  blend of{" "}
+                  A <mark data-entity="noun">Senior Backend AI Engineer</mark>{" "}
+                  with <mark data-entity="verb">6+ years</mark> building
+                  production systems in{" "}
+                  <mark data-entity="skill">Python, FastAPI & AWS</mark>, from{" "}
                   <mark data-entity="freelance">
-                    Data Analyst and Backend Development
-                  </mark>
+                    Generative AI and RAG pipelines to event-driven
+                    microservices
+                  </mark>{" "}
+                  serving millions of users
                 </div>
               </span>
               <CompetitiveSites logos={competitiveSites.competitiveSites} />
