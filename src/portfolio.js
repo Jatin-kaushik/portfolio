@@ -169,7 +169,7 @@ const skills = {
           skillName: "Python",
           fontAwesomeClassname: "ion-logo-python",
           style: {
-            color: "#3776AB",
+            color: "#5B9BD5",
           },
         },
         {
@@ -209,9 +209,11 @@ const skills = {
         },
         {
           skillName: "MySQL",
-          fontAwesomeClassname: "simple-icons:mysql",
+          // simple-icons:mysql is a wordmark -- at tile size it collapses into
+          // an unreadable smudge. logos-mysql-icon is the dolphin glyph alone.
+          fontAwesomeClassname: "logos-mysql-icon",
           style: {
-            color: "#7BB6DB",
+            backgroundColor: "transparent",
           },
         },
         {
@@ -281,7 +283,7 @@ const skills = {
           skillName: "Python",
           fontAwesomeClassname: "ion-logo-python",
           style: {
-            color: "#3776AB",
+            color: "#5B9BD5",
           },
         },
         {
@@ -428,7 +430,7 @@ const skills = {
           skillName: "Python",
           fontAwesomeClassname: "ion-logo-python",
           style: {
-            color: "#3776AB",
+            color: "#5B9BD5",
           },
         },
         {
@@ -550,7 +552,7 @@ const skills = {
           skillName: "Python-Dash",
           fontAwesomeClassname: "ion-logo-python",
           style: {
-            color: "#3776AB",
+            color: "#5B9BD5",
           },
         },
         {

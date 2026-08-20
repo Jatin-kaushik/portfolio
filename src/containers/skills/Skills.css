@@ -131,6 +131,13 @@
   max-height: 100%;
 }
 
+/* logos-mysql-icon is the only MySQL mark that is a dolphin rather than a
+   "MySQL" wordmark, but its fills are hard-coded so `color` cannot reach it.
+   Lift it optically so it matches the weight of the solid marks beside it. */
+.software-skill-inline[name="MySQL"] svg {
+  filter: brightness(1.5) saturate(1.15);
+}
+
 .software-skill-inline:hover {
   transform: translateY(-5px) scale(1.07);
   border-color: var(--accent);
