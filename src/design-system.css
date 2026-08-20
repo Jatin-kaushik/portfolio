@@ -114,12 +114,12 @@ body {
 
 .ds-section {
   position: relative;
-  padding: 120px 0;
+  padding: 84px 0;
 }
 
 @media (max-width: 768px) {
   .ds-section {
-    padding: 72px 0;
+    padding: 56px 0;
   }
 }
 
@@ -179,12 +179,14 @@ body {
   max-width: 60ch;
 }
 
+/* Starts already coloured. An earlier version began at #ffffff, which made
+   short spans read as a half-white, half-blue word -- it looked like a
+   rendering fault rather than an accent. */
 .ds-gradient-text {
   background: linear-gradient(
     100deg,
-    #ffffff 0%,
-    #dfe6ff 34%,
-    var(--accent-soft) 68%,
+    var(--accent-soft) 0%,
+    #8ea6ff 45%,
     var(--accent-3) 100%
   );
   -webkit-background-clip: text;

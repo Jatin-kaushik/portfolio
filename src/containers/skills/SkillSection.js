@@ -2,43 +2,42 @@ import React from "react";
 import "./Skills.css";
 import SoftwareSkill from "../../components/softwareSkills/SoftwareSkill";
 import { skills } from "../../portfolio";
-import SkillVisual from "./SkillVisual";
 import { useReveal } from "../../hooks/useReveal";
 
-function SkillBlock({ skill, theme }) {
-  const [ref, visible] = useReveal({ threshold: 0.12 });
+function SkillCard({ skill, index }) {
+  const [ref, visible] = useReveal({ threshold: 0.1 });
 
   return (
-    <div
+    <article
       ref={ref}
-      className={`skills-main-div ds-glass ds-reveal ${
+      className={`skill-card ds-glass ds-glass--interactive ds-reveal ${
         visible ? "is-visible" : ""
       }`}
+      style={{ transitionDelay: `${(index % 2) * 90}ms` }}
     >
-      <div className="skills-image-div">
-        <SkillVisual skill={skill} />
-      </div>
+      <header className="skill-card__head">
+        <span className="skill-card__index">
+          {String(index + 1).padStart(2, "0")}
+        </span>
+        <h3 className="skill-card__title">{skill.title}</h3>
+      </header>
 
-      <div className="skills-text-div">
-        <h3 className="skills-heading">{skill.title}</h3>
-        <SoftwareSkill logos={skill.softwareSkills} />
-        <div>
-          {skill.skills.map((sentence) => (
-            <p className="skills-text" key={sentence}>
-              {sentence.replace(/^⚡\s*/, "")}
-            </p>
-          ))}
-        </div>
-      </div>
-    </div>
+      <SoftwareSkill logos={skill.softwareSkills} />
+
+      <ul className="skill-card__list">
+        {skill.skills.map((sentence) => (
+          <li key={sentence}>{sentence.replace(/^⚡\s*/, "")}</li>
+        ))}
+      </ul>
+    </article>
   );
 }
 
-export default function SkillSection(props) {
+export default function SkillSection() {
   return (
-    <div>
-      {skills.data.map((skill) => (
-        <SkillBlock key={skill.title} skill={skill} theme={props.theme} />
+    <div className="skills-grid">
+      {skills.data.map((skill, i) => (
+        <SkillCard key={skill.title} skill={skill} index={i} />
       ))}
     </div>
   );

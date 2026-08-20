@@ -20,6 +20,13 @@ export function useReveal({ threshold = 0.15, once = true } = {}) {
       return undefined;
     }
 
+    // intersectionRatio is measured against the element's own height, so an
+    // element taller than the viewport can never reach a high ratio: a 5,000px
+    // timeline in an 800px window peaks at ~0.16, and anything above that would
+    // keep it stuck at opacity 0 forever. Fall back to "any part visible".
+    const tall = node.getBoundingClientRect().height > window.innerHeight * 0.7;
+    const effectiveThreshold = tall ? 0 : threshold;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -31,7 +38,7 @@ export function useReveal({ threshold = 0.15, once = true } = {}) {
           }
         });
       },
-      { threshold, rootMargin: "0px 0px -60px 0px" }
+      { threshold: effectiveThreshold, rootMargin: "0px 0px -60px 0px" }
     );
 
     observer.observe(node);

@@ -1,7 +1,9 @@
 .metrics-section {
   position: relative;
   z-index: 1;
-  padding: 20px 0 90px;
+  /* Small bottom padding: the next section supplies its own top padding,
+     and 90px here left a conspicuous empty band between the two. */
+  padding: 12px 0 18px;
 }
 
 .metrics-grid {

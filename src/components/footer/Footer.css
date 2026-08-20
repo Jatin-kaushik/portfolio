@@ -8,7 +8,9 @@
 .footer-inner {
   max-width: var(--container);
   margin: 0 auto;
-  padding: 40px var(--gutter);
+  /* Extra right padding keeps the last link clear of the floating
+     scroll-to-top button, which previously overlapped it. */
+  padding: 40px 84px 40px var(--gutter);
   display: flex;
   align-items: center;
   justify-content: space-between;

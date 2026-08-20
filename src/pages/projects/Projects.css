@@ -9,7 +9,7 @@
 .projects-hero {
   position: relative;
   z-index: 1;
-  padding: 152px 0 40px;
+  padding: 140px 0 12px;
 }
 
 .projects-title {
@@ -19,7 +19,7 @@
 .projects-section {
   position: relative;
   z-index: 1;
-  padding: 46px 0;
+  padding: 34px 0;
 }
 
 .projects-subhead {

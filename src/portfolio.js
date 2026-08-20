@@ -206,7 +206,8 @@ const skills = {
           skillName: "Apache Kafka",
           fontAwesomeClassname: "simple-icons:apachekafka",
           style: {
-            color: "#231F20",
+            // Brand black (#231F20) is invisible on the dark tiles.
+            color: "#E8EAF0",
           },
         },
         {
@@ -248,14 +249,16 @@ const skills = {
           skillName: "LangChain",
           fontAwesomeClassname: "simple-icons:langchain",
           style: {
-            color: "#1C3C3C",
+            // Brand teal (#1C3C3C) is too dark against the dark tiles.
+            color: "#4FD1B5",
           },
         },
         {
           skillName: "OpenAI",
           fontAwesomeClassname: "simple-icons:openai",
           style: {
-            color: "#412991",
+            // Brand violet (#412991) is too dark against the dark tiles.
+            color: "#E8EAF0",
           },
         },
         {
@@ -267,7 +270,7 @@ const skills = {
         },
         {
           skillName: "PyTorch",
-          fontAwesomeClassname: "logos-pytorch",
+          fontAwesomeClassname: "simple-icons:pytorch",
           style: {
             backgroundColor: "transparent",
           },
@@ -366,7 +369,7 @@ const skills = {
         },
         {
           skillName: "PyTorch",
-          fontAwesomeClassname: "logos-pytorch",
+          fontAwesomeClassname: "simple-icons:pytorch",
           style: {
             backgroundColor: "transparent",
           },
@@ -396,7 +399,7 @@ const skills = {
         },
         {
           skillName: "Tableau",
-          fontAwesomeClassname: "logos-tableau",
+          fontAwesomeClassname: "simple-icons:tableau",
           style: {
             backgroundColor: "transparent",
           },
@@ -518,7 +521,7 @@ const skills = {
 const projectsHeader = {
   title: "Projects",
   description:
-    "My projects makes use of vast variety of latest technology tools. My best experience is to create Data Science projects and deploy them to web applications using cloud infrastructure.",
+    "Production platforms and side builds \u2014 from Generative AI systems on AWS Bedrock and event-driven microservices carrying live tournament traffic, to smaller experiments in data science and computer vision.",
 };
 
 //project cards

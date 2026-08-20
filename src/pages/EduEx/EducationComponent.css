@@ -9,7 +9,7 @@
 .edu-hero {
   position: relative;
   z-index: 1;
-  padding: 152px 0 56px;
+  padding: 140px 0 20px;
 }
 
 .edu-hero__title {
@@ -37,6 +37,16 @@
 
 .resume-col {
   min-width: 0;
+}
+
+/* The right column (education, achievements) is much shorter than the
+   experience timeline. Pinning it keeps it in view instead of leaving a
+   tall empty gutter beside the rest of the timeline. */
+@media (min-width: 941px) {
+  .resume-col:last-child {
+    position: sticky;
+    top: 96px;
+  }
 }
 
 .resume-group + .resume-group {
