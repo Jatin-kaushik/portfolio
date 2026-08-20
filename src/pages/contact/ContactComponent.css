@@ -1,192 +1,100 @@
 .contact-main {
-  width: 100%;
-}
-
-.basic-contact {
-  margin-left: 5%;
-  margin-right: 5%;
-}
-
-.contact-heading-div {
+  position: relative;
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
 }
 
-.blog-heading-div {
-  display: flex;
+.contact-hero {
+  position: relative;
+  z-index: 1;
+  flex-grow: 1;
+  padding: 160px 0 90px;
 }
 
-.address-heading-div {
-  display: flex;
-}
-
-.blog-heading-div > * {
-  flex: 1;
-}
-
-.contact-heading-div > * {
-  flex: 1;
-}
-
-.address-heading-div > * {
-  flex: 1;
-}
-
-.contact-heading-img-div {
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 56px;
   align-items: center;
-  justify-content: center;
 }
 
-.blog-heading-img-div {
+.contact-title {
+  margin: 0 0 22px;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+.contact-actions {
+  margin: 32px 0 28px;
+}
+
+.contact-social {
+  padding-top: 4px;
+}
+
+/* ---------------- Detail cards ---------------- */
+
+.contact-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 22px 24px;
+  border-radius: var(--radius);
+}
+
+.contact-card__label {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.contact-card__value {
+  font-size: 1rem;
+  font-weight: 550;
+  color: var(--text);
+  letter-spacing: -0.018em;
+  text-decoration: none;
+  transition: color 0.25s var(--ease);
+  word-break: break-word;
+}
+
+a.contact-card__value:hover {
+  color: var(--accent-soft);
+}
+
+.contact-card__value--plain {
+  font-weight: 450;
+  color: var(--text-muted);
+}
+
+.contact-card--status {
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  gap: 12px;
+  background: rgba(52, 211, 153, 0.055);
+  border-color: rgba(52, 211, 153, 0.22);
 }
 
-.contact-heading-text-div {
-  text-align: center;
+.contact-card--status .contact-card__value--plain {
+  font-size: 0.885rem;
+  color: #a7f3d0;
 }
 
-.blog-heading-text-div {
-  text-align: center;
-}
-
-.address-heading-text-div {
-  text-align: center;
-}
-
-.contact-heading-img-div > * {
-  max-width: 100%;
-  height: auto;
-}
-
-.blog-heading-img-div > * {
-  max-width: 100%;
-  height: auto;
-}
-
-.contact-heading-text {
-  font-size: 56px;
-  font-weight: 400;
-  font-family: "Google Sans Medium";
-  line-height: 1.1;
-  text-align: center;
-  margin-top: 60px;
-}
-
-.blog-heading-text {
-  font-size: 56px;
-  font-weight: 400;
-  font-family: "Google Sans Medium";
-  line-height: 1.1;
-  text-align: center;
-  margin-top: 40px;
-}
-
-.address-heading-text {
-  font-size: 30px;
-  font-family: "Google Sans Regular";
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.contact-header-detail-text {
-  font-size: 20px;
-  line-height: 30px;
-  margin-top: 0px;
-  margin-left: 20px;
-  margin-right: 20px;
-  font-family: "Google Sans Medium";
-}
-
-.blog-header-detail-text {
-  font-size: 20px;
-  line-height: 30px;
-  margin-top: 0px;
-  margin-left: 20px;
-  margin-right: 20px;
-  font-family: "Google Sans Medium";
-}
-
-.resume-btn-div {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.blogsite-btn-div {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.address-btn-div {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: 0;
-}
-
-@media (max-width: 1380px) {
-  .contact-heading-text {
-    font-size: 50px;
-    margin-top: 60px;
+@media (max-width: 940px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 42px;
   }
 
-  .blog-heading-text {
-    font-size: 50px;
-    margin-top: 40px;
-  }
-}
-
-@media (max-width: 768px) {
-  .contact-heading-text {
-    font-size: 30px;
-    margin-top: 0px;
-  }
-
-  .blog-heading-text {
-    font-size: 30px;
-    margin-top: 0px;
-  }
-
-  .address-heading-text {
-    font-size: 20px;
-  }
-
-  .blog-heading-div {
-    flex-direction: column-reverse;
-    margin-top: 60px;
-  }
-
-  .address-heading-div {
-    flex-direction: column;
-    margin-top: 60px;
-  }
-
-  .blog-heading-text-div {
-    margin-top: 40px;
-  }
-
-  .address-heading-text-div {
-    margin-top: 40px;
-  }
-
-  .contact-heading-div {
-    flex-direction: column;
-  }
-
-  .contact-header-detail-text {
-    font-size: 16px;
-    margin-left: 0px;
-    margin-right: 0px;
-    line-height: normal;
-    text-align: center;
-  }
-
-  .blog-header-detail-text {
-    font-size: 16px;
-    margin-left: 0px;
-    margin-right: 0px;
-    line-height: normal;
-    text-align: center;
+  .contact-hero {
+    padding: 124px 0 60px;
   }
 }

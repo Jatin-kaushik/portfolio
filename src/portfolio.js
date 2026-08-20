@@ -19,8 +19,83 @@ const greeting = {
   title: "Namaste!",
   sub: "Jatin Kaushik",
   logo_name: "Jatin Kaushik",
-  resumeLink: "",
+  resumeLink:
+    "https://www.linkedin.com/in/jatin-kaushik/detail/overlay-view/urn:li:fsd_profileTreasuryMedia:(ACoAADDQg8QBf9pFUi61iKiGqe_lfNOzWaOZueI,1635460507931)/",
 };
+
+// Headline numbers - animated counters on the home page.
+// Every figure here is drawn from the experience entries below.
+const metrics = [
+  {
+    value: 6,
+    suffix: "+",
+    label: "Years building backend systems",
+    caption: "Python \u00b7 FastAPI \u00b7 Java",
+  },
+  {
+    value: 90,
+    suffix: "%",
+    label: "Cloud cost reduction",
+    caption: "$31K \u2192 $3K annually at Infosys",
+  },
+  {
+    value: 10,
+    suffix: "K+",
+    label: "Events per second",
+    caption: "Fault-tolerant, zero data loss",
+  },
+  {
+    value: 99.9,
+    suffix: "%",
+    decimals: 1,
+    label: "Uptime at global scale",
+    caption: "Live international tournaments",
+  },
+];
+
+// Organisations shown as a trust strip under the hero.
+const companies = [
+  { name: "HERE Technologies", detail: "SDE-2, Python & AI" },
+  { name: "Kellton Tech", detail: "Senior Software Engineer" },
+  { name: "Infosys", detail: "Specialist Programmer" },
+  { name: "ByteBlanket", detail: "Data Science Engineer" },
+];
+
+// Flagship work highlighted on the home page.
+const highlights = [
+  {
+    tag: "Generative AI",
+    title: "ATP GenAI Commentary Chatbot",
+    body:
+      "AWS Bedrock agents and knowledge bases over millions of historical match records, generating context-aware commentary in under 15 seconds at 95% accuracy.",
+    stack: ["AWS Bedrock", "FastAPI", "RAG", "Python"],
+    icon: "simple-icons:amazonaws",
+  },
+  {
+    tag: "Infrastructure",
+    title: "RabbitMQ \u2192 NATS migration",
+    body:
+      "Re-architected the messaging backbone behind the Australian Open, Roland Garros and Formula-E, cutting annual cloud spend by roughly 90% while holding 99.9% uptime.",
+    stack: ["NATS", "AWS ECS", "Kafka", "Hazelcast"],
+    icon: "simple-icons:natsdotio",
+  },
+  {
+    tag: "Platform",
+    title: "Enterprise JIRA Sync Platform",
+    body:
+      "A FastAPI platform connecting global automotive customers with Professional Services and engineering teams, accelerating issue resolution across organisations.",
+    stack: ["FastAPI", "PostgreSQL", "Agentic AI", "Rovo"],
+    icon: "simple-icons:jira",
+  },
+  {
+    tag: "Security",
+    title: "PII encryption framework",
+    body:
+      "AES-256 and RSA cryptography for multi-tenant SaaS, delivering GDPR/CCPA-compliant handling of sensitive customer data at 1M+ daily transactions.",
+    stack: ["AES-256", "RSA", "JWT", "RBAC"],
+    icon: "simple-icons:letsencrypt",
+  },
+];
 
 // home logos
 const competitiveSites = {
@@ -1021,9 +1096,11 @@ const socialMediaLinks = [
   {
     name: "Github",
     link: "https://github.com/Jatin-kaushik",
-    iconifyClassname: "simple-icons:hackerrank",
+    iconifyClassname: "simple-icons:github",
     fontAwesomeIcon: "fa-github", // Reference https://fontawesome.com/icons/github?style=brands
-    backgroundColor: "#ffffff", // Reference https://simpleicons.org/?q=github
+    // GitHub brand black. Was #ffffff, which rendered a white glyph on a
+    // white tile and made the icon invisible.
+    backgroundColor: "#181717", // Reference https://simpleicons.org/?q=github
   },
   {
     name: "LinkedIn",
@@ -1049,6 +1126,9 @@ export {
   settings,
   seo,
   greeting,
+  metrics,
+  companies,
+  highlights,
   socialMediaLinks,
   skills,
   competitiveSites,

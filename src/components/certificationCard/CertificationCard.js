@@ -1,50 +1,61 @@
-import React, { Component } from "react";
+import React from "react";
 import "./CertificationCard.css";
-import { Fade } from "react-reveal";
+import { useReveal } from "../../hooks/useReveal";
 
-class CertificationCard extends Component {
-  render() {
-    const certificate = this.props.certificate;
-    const theme = this.props.theme;
-    return (
-      <Fade bottom duration={2000} distance="20px">
-        <div className="cert-card">
-          <div className="content">
-            <div className="content-overlay"></div>
-            <div
-              className="cert-header"
-              style={{ backgroundColor: certificate.color_code }}
-            >
-              <img
-                className="logo_img"
-                src={require(`../../assets/certificates/${certificate.logo_path}`)}
-                alt={certificate.alt_name}
-              />
-            </div>
-          </div>
-          <div className="cert-body">
-            <h2 className="cert-body-title" style={{ color: theme.text }}>
-              {certificate.title}
-              <a
-                style={{ color: theme.text }}
-                href={certificate.certificate_link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i
-                  className={`fas fa-external-link-alt`}
-                  style={{ paddingLeft: "10px" }}
-                ></i>
-              </a>
-            </h2>
-            <h3 className="cert-body-subtitle" style={{ color: theme.orange }}>
-              {certificate.subtitle}
-            </h3>
-          </div>
-        </div>
-      </Fade>
-    );
-  }
+export default function CertificationCard({ certificate, index = 0 }) {
+  const [ref, visible] = useReveal({ threshold: 0.12 });
+  const hasLink = Boolean(certificate.certificate_link);
+
+  const Wrapper = hasLink ? "a" : "div";
+  const linkProps = hasLink
+    ? {
+        href: certificate.certificate_link,
+        target: "_blank",
+        rel: "noopener noreferrer",
+      }
+    : {};
+
+  return (
+    <Wrapper
+      {...linkProps}
+      ref={ref}
+      className={`cert-card ds-glass ds-glass--interactive ds-reveal ${
+        visible ? "is-visible" : ""
+      } ${hasLink ? "is-linked" : ""}`}
+      style={{ transitionDelay: `${(index % 4) * 60}ms` }}
+    >
+      <div className="cert-header">
+        <img
+          className="logo_img"
+          src={require(`../../assets/certificates/${certificate.logo_path}`)}
+          alt={certificate.alt_name}
+          loading="lazy"
+        />
+      </div>
+
+      <div className="cert-body">
+        <h3 className="cert-body-title">{certificate.title}</h3>
+        <p className="cert-body-subtitle">{certificate.subtitle}</p>
+      </div>
+
+      {hasLink ? (
+        <span className="cert-verify">
+          Verify
+          <svg
+            width="12"
+            height="12"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M7 17L17 7M9 7h8v8" />
+          </svg>
+        </span>
+      ) : null}
+    </Wrapper>
+  );
 }
-
-export default CertificationCard;

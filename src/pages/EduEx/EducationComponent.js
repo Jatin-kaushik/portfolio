@@ -2,41 +2,41 @@ import React, { Component } from "react";
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import TopButton from "../../components/topButton/TopButton";
-// import Educations from "../../containers/education/Educations";
+import Aurora from "../../components/aurora/Aurora";
 import Certifications from "../../containers/certifications/Certifications";
 import CompetitiveSites from "../../components/competitiveSites/CompetitiveSites";
-import EducationImg from "./EducationImg";
 import { competitiveSites } from "../../portfolio";
 import "./EducationComponent.css";
-import { Fade } from "react-reveal";
 import Resume from "./Resume";
 
 class Education extends Component {
   render() {
-    const theme = this.props.theme;
     return (
-      <div className="education-main">
+      <div className="education-main page-root">
+        <Aurora />
         <Header theme={this.props.theme} />
-        <div className="basic-education">
-          <Fade bottom duration={2000} distance="40px">
-            <div className="heading-div">
-              <div className="heading-img-div">
-                <EducationImg theme={theme} />
-              </div>
-              <div className="heading-text-div">
-                <h1 className="heading-text" style={{ color: theme.orange }}>
-                  Experience &#38; Education
-                </h1>
-                <h3 className="heading-sub-text" style={{ color: theme.text }}>
-                  Basic Qualification and Certifcations
-                </h3>
-                <CompetitiveSites logos={competitiveSites.competitiveSites} />
-              </div>
+
+        <section className="edu-hero">
+          <div className="ds-container">
+            <p className="ds-eyebrow">Career</p>
+            <h1 className="ds-h1 edu-hero__title">
+              Experience &amp;{" "}
+              <span className="ds-gradient-text">Education</span>
+            </h1>
+            <p className="ds-lead">
+              Six years across enterprise AI platforms, global sports technology
+              and high-throughput backend systems &mdash; plus the
+              qualifications and certifications behind them.
+            </p>
+            <div className="edu-hero__socials">
+              <CompetitiveSites logos={competitiveSites.competitiveSites} />
             </div>
-          </Fade>
-          <Resume />
-          <Certifications theme={this.props.theme} />
-        </div>
+          </div>
+        </section>
+
+        <Resume />
+        <Certifications theme={this.props.theme} />
+
         <Footer theme={this.props.theme} />
         <TopButton theme={this.props.theme} />
       </div>

@@ -1,28 +1,25 @@
+.certs {
+  position: relative;
+  z-index: 1;
+}
+
+.certs-header-div {
+  max-width: 620px;
+  margin-bottom: 48px;
+}
+
 .certs-header {
-  font-size: 40px;
-  line-height: 1.1;
-  font-family: "Google Sans Regular";
-  text-align: center;
+  margin: 0 0 16px;
 }
 
 .certs-body-div {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(238px, 1fr));
+  gap: 18px;
 }
 
-@media (max-width: 1380px) {
-  .certs-header {
-    font-size: 35px;
-  }
-}
-
-@media (max-width: 768px) {
+@media (max-width: 520px) {
   .certs-body-div {
-    flex-direction: column;
-  }
-
-  .certs-header {
-    font-size: 30px;
+    grid-template-columns: 1fr;
   }
 }

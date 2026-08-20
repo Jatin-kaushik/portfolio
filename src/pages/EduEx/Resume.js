@@ -1,59 +1,53 @@
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react";
 import Resumecontent from "./ResumeContent";
 import { resumeleft, resumeright } from "../../portfolio";
 import "./EducationComponent.css";
-import React from "react";
+import { useReveal } from "../../hooks/useReveal";
+
+function Group({ title, items }) {
+  const [ref, visible] = useReveal({ threshold: 0.06 });
+
+  return (
+    <div
+      ref={ref}
+      className={`resume-group ds-reveal ${visible ? "is-visible" : ""}`}
+    >
+      <h3 className="resume-title">{title}</h3>
+      {items.map((item, i) => (
+        <Resumecontent
+          key={`${item.title}-${i}`}
+          title={item.title}
+          subtitle={item.subtitle}
+          date={item.date}
+          content={item.content}
+        />
+      ))}
+    </div>
+  );
+}
+
 export default function Resume() {
   return (
-    <Container fluid className="resume-section">
-      <Container>
-        <Row className="resume">
-          <div className="heading-div">
-            <div>
-              <Col md={6} className="resume-left">
-                {resumeleft.left.title.map((head) => {
-                  return (
-                    <>
-                      <h3 className="resume-title">{head}</h3>
-                      {resumeleft.left.data.map((res) => {
-                        return (
-                          <Resumecontent
-                            title={res.title}
-                            subtitle={res.subtitle}
-                            date={res.date}
-                            content={res.content}
-                          ></Resumecontent>
-                        );
-                      })}
-                    </>
-                  );
-                })}
-              </Col>
-            </div>
-            <div>
-              <Col md={6} className="resume-right">
-                {resumeright.right.map((head) => {
-                  return (
-                    <>
-                      <h3 className="resume-title">{head.title}</h3>
-                      {head.data.map((info) => {
-                        return (
-                          <Resumecontent
-                            title={info.title}
-                            subtitle={info.subtitle}
-                            date={info.date}
-                            content={info.content}
-                          ></Resumecontent>
-                        );
-                      })}
-                    </>
-                  );
-                })}
-              </Col>
-            </div>
+    <section className="resume-section">
+      <div className="ds-container">
+        <div className="resume-grid">
+          <div className="resume-col">
+            {resumeleft.left.title.map((head) => (
+              <Group key={head} title={head} items={resumeleft.left.data} />
+            ))}
           </div>
-        </Row>
-      </Container>
-    </Container>
+
+          <div className="resume-col">
+            {resumeright.right.map((section) => (
+              <Group
+                key={section.title}
+                title={section.title}
+                items={section.data}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }

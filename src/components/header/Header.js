@@ -1,92 +1,67 @@
 import React, { Component } from "react";
 import "./Header.css";
-import { Fade } from "react-reveal";
 import { NavLink, Link } from "react-router-dom";
-import { settings } from "../../portfolio.js";
+import { settings, greeting } from "../../portfolio.js";
 import SeoHeader from "../seoHeader/SeoHeader";
-// import { Navbar } from "react-bootstrap";
-import logo from "../../assets/logo/logo-01.png";
-const onMouseEnter = (event, color) => {
-  const el = event.target;
-  el.style.backgroundColor = color;
-};
 
-const onMouseOut = (event) => {
-  const el = event.target;
-  el.style.backgroundColor = "transparent";
-};
+const LINKS = [
+  { to: "/home", label: "Home" },
+  { to: "/education", label: "Experience" },
+  { to: "/projects", label: "Projects" },
+];
 
 class Header extends Component {
   render() {
-    const theme = this.props.theme;
-    const link = settings.isSplash ? "/splash" : "home";
+    const homeLink = settings.isSplash ? "/splash" : "/home";
+    const initials = greeting.sub
+      .split(" ")
+      .map((word) => word[0])
+      .join("")
+      .slice(0, 2)
+      .toUpperCase();
+
     return (
-      <Fade top duration={1000} distance="20px">
+      <React.Fragment>
         <SeoHeader />
-        <div>
-          <header className="header" fixed="top">
-            <NavLink to={link} tag={Link} className="logo">
-              <img className="logo_header" src={logo} alt="logo" />
+        <header className="header">
+          <div className="header-inner">
+            <NavLink to={homeLink} tag={Link} className="logo">
+              <span className="logo__mark">{initials}</span>
+              <span className="logo__text">
+                <span className="logo__name">{greeting.sub}</span>
+                <span className="logo__role">Backend &amp; AI Engineer</span>
+              </span>
             </NavLink>
+
             <input className="menu-btn" type="checkbox" id="menu-btn" />
-            <label className="menu-icon" htmlFor="menu-btn">
-              <span className="navicon"></span>
+            <label className="menu-icon" htmlFor="menu-btn" aria-label="Menu">
+              <span className="navicon" />
             </label>
-            <ul className="menu" style={{ backgroundColor: theme.body }}>
-              <li>
-                <NavLink
-                  to="/home"
-                  tag={Link}
-                  activeStyle={{ fontWeight: "bold" }}
-                  style={{ color: theme.text }}
-                  onMouseEnter={(event) => onMouseEnter(event, theme.blue)}
-                  onMouseOut={(event) => onMouseOut(event)}
-                >
-                  Home
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/education"
-                  tag={Link}
-                  activeStyle={{ fontWeight: "bold" }}
-                  style={{ color: theme.text }}
-                  onMouseEnter={(event) => onMouseEnter(event, theme.blue)}
-                  onMouseOut={(event) => onMouseOut(event)}
-                >
-                  Experience &#38; Education
-                </NavLink>
-              </li>
-              <li></li>
-              <li>
-                <NavLink
-                  to="/projects"
-                  tag={Link}
-                  activeStyle={{ fontWeight: "bold" }}
-                  style={{ color: theme.text }}
-                  onMouseEnter={(event) => onMouseEnter(event, theme.blue)}
-                  onMouseOut={(event) => onMouseOut(event)}
-                >
-                  Projects
-                </NavLink>
-              </li>
+
+            <ul className="menu">
+              {LINKS.map((link) => (
+                <li key={link.to}>
+                  <NavLink to={link.to} tag={Link} activeClassName="is-active">
+                    {link.label}
+                  </NavLink>
+                </li>
+              ))}
               <li>
                 <NavLink
                   to="/contact"
                   tag={Link}
-                  activeStyle={{ fontWeight: "bold" }}
-                  style={{ color: theme.text }}
-                  onMouseEnter={(event) => onMouseEnter(event, theme.blue)}
-                  onMouseOut={(event) => onMouseOut(event)}
+                  className="menu__cta"
+                  activeClassName="is-active"
                 >
-                  Contact Me
+                  Get in touch
                 </NavLink>
               </li>
             </ul>
-          </header>
-        </div>
-      </Fade>
+          </div>
+        </header>
+      </React.Fragment>
     );
   }
 }
+
 export default Header;

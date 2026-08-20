@@ -1,0 +1,89 @@
+.highlights {
+  position: relative;
+  z-index: 1;
+}
+
+.highlights__header {
+  max-width: 640px;
+  margin-bottom: 52px;
+}
+
+.highlights__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.highlight {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 30px;
+}
+
+.highlight__head {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 20px;
+}
+
+.highlight__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: linear-gradient(
+    140deg,
+    rgba(110, 139, 255, 0.18),
+    rgba(168, 85, 247, 0.1)
+  );
+  border: 1px solid rgba(110, 139, 255, 0.24);
+  font-size: 21px;
+  color: var(--accent-soft);
+  flex-shrink: 0;
+  transition: transform 0.4s var(--ease);
+}
+
+.highlight:hover .highlight__icon {
+  transform: rotate(-8deg) scale(1.08);
+}
+
+.highlight__title {
+  margin: 0 0 12px;
+  color: var(--text);
+}
+
+.highlight__body {
+  font-size: 0.925rem;
+  line-height: 1.68;
+  color: var(--text-muted);
+  margin: 0 0 22px;
+  flex-grow: 1;
+  font-weight: 350;
+}
+
+.highlight__stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.highlight__stack .ds-chip {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+}
+
+@media (max-width: 860px) {
+  .highlights__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .highlight {
+    padding: 26px 24px;
+  }
+}

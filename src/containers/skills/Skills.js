@@ -1,20 +1,32 @@
 import React from "react";
 import "./Skills.css";
 import SkillSection from "./SkillSection";
-import { Fade } from "react-reveal";
+import { useReveal } from "../../hooks/useReveal";
 
 export default function Skills(props) {
-  const theme = props.theme;
+  const [ref, visible] = useReveal();
+
   return (
-    <div className="main" id="skills">
-      <div className="skills-header-div">
-        <Fade bottom duration={2000} distance="20px">
-          <h1 className="skills-header" style={{ color: theme.text }}>
-            What I Do?
-          </h1>
-        </Fade>
+    <section className="skills-root ds-section" id="skills">
+      <div className="ds-container">
+        <header
+          ref={ref}
+          className={`skills-header-div ds-reveal ${
+            visible ? "is-visible" : ""
+          }`}
+        >
+          <p className="ds-eyebrow">Capabilities</p>
+          <h2 className="skills-header ds-h2">
+            What I <span className="ds-gradient-text">do</span>
+          </h2>
+          <p className="ds-lead">
+            Six areas of depth, from the Python services that carry production
+            traffic to the Generative AI systems layered on top of them.
+          </p>
+        </header>
+
+        <SkillSection theme={props.theme} />
       </div>
-      <SkillSection theme={theme} />
-    </div>
+    </section>
   );
 }

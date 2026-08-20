@@ -1,20 +1,16 @@
+/* Centring lives on the splash wrapper, not on `body`.
+   This file is loaded globally, so a bare `body { display: flex }` here
+   leaked onto every other page and broke their layout. */
 .logo_wrapper {
   height: 100vh;
   width: 100vw;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .screen {
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-body {
-  padding: 0;
-  margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;

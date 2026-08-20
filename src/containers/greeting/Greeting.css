@@ -1,230 +1,307 @@
-.main {
-  width: 90%;
-  margin: 0px auto;
-  margin-top: 4rem;
-}
-.greet-main {
-  width: 90%;
-  padding: 20px 10px;
-  margin: 0px auto;
-  margin-top: 1rem;
+/* ==========================================================================
+   Hero
+   ========================================================================== */
+
+.hero {
+  position: relative;
+  z-index: 1;
+  padding: 148px 0 40px;
 }
 
-.gretting-main {
-  width: 90%;
-  padding: 20px 10px;
-  margin: 0px auto;
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  gap: 56px;
+  align-items: center;
 }
 
-.greeting-main {
+/* ---------------- Copy ---------------- */
+
+.hero__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 15px 7px 13px;
+  margin: 0 0 30px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  font-size: 0.79rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: -0.005em;
+}
+
+.hero__title {
+  margin: 0 0 22px;
+  /* Slightly tighter than the global h1 so "backend systems" stays on one
+     line inside the narrower hero column. */
+  font-size: clamp(2.15rem, 5.4vw, 4.35rem);
+}
+
+/* Terminal-style role line, cycled by typewriter-effect. */
+.hero__role {
   display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: clamp(0.88rem, 1.5vw, 1.06rem);
+  font-weight: 500;
+  color: var(--accent-3);
+  margin-bottom: 26px;
+  min-height: 1.7em;
 }
 
-.greeting-main > * {
-  flex: 1;
-  margin-bottom: 30px;
-}
-.button-greeting-div {
-  display: flex;
-  margin-top: 10px;
-  text-align: center;
+.hero__role-prefix {
+  color: var(--accent-2);
+  font-weight: 600;
 }
 
-.greeting-text {
-  margin-top: 0px;
-  font-size: 100px;
-  margin-bottom: 0px;
-  line-height: 1.1;
-  font-family: "Google Sans Regular";
-}
-.greeting-sub {
-  margin-top: 0px;
-  font-size: 50px;
-  margin-bottom: 50px;
-  line-height: 1.1;
-  font-family: "Google Sans Bold";
-}
-.greeting-typewriter {
-  margin-top: 0px;
-  font-size: 60px;
-  margin-bottom: 60px;
-  line-height: 0px;
-  font-family: "Google Sans Regular";
-}
-
-.greeting-text-span {
-  font-size: 18px;
-  margin-top: 65px;
-  margin-right: 40px;
-  font-family: "Google Sans Medium";
-}
-
-.greeting-image-div > * {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Media Query */
-@media (max-width: 1380px) {
-  .greeting-text {
-    font-size: 50px;
-  }
-  .greeting-text-span {
-    font-size: 20px;
-  }
-}
-@media (max-width: 768px) {
-  .button-greeting-div {
-    justify-content: space-around;
-  }
-  .greeting-text {
-    font-size: 60px;
-    margin-top: 50px;
-  }
-  .greeting-sub {
-    margin-top: 10px;
-    font-size: 30px;
-    margin-bottom: 0px;
-    line-height: 1.1;
-    font-family: "Google Sans Bold";
-  }
-  .greeting-typewriter {
-    margin-top: 30px;
-    font-size: 30px;
-    margin-bottom: 100px;
-  }
-  .greeting-text-span {
-    font-size: 18px;
-    margin-right: 0px;
-  }
-
-  .greeting-main {
-    display: block;
-  }
-
-  .portfolio-repo-btn-div {
-    width: 100%;
-    margin-top: 200px;
-    display: flex;
-    justify-content: center;
-  }
-  .button-greeting-div {
-    display: flex;
-    margin-top: 10px;
-  }
-}
-@media (max-width: 480px) {
-  .button-greeting-div {
-    justify-content: space-around;
-  }
-  .greeting-text {
-    font-size: 50px;
-    margin-top: -50px;
-  }
-  .greeting-sub {
-    margin-top: 10px;
-    font-size: 20px;
-    margin-bottom: 0px;
-    line-height: 1.1;
-    font-family: "Google Sans Bold";
-  }
-
-  .greeting-typewriter {
-    margin-top: 20px;
-    font-size: 25px;
-    margin-bottom: 40px;
-  }
-  .greeting-text-span {
-    font-size: 15px;
-    margin-right: 0px;
-    line-height: normal;
-    margin-bottom: 0px;
-  }
-  .greeting-main {
-    display: block;
-  }
-
-  .button-greeting-div {
-    display: flex;
-    margin-top: -10px;
-    text-align: center;
-  }
-}
-
-.entities {
-  line-height: 2;
-}
-
-[data-entity] {
-  padding: 0.25em 0.35em;
-  margin: 0px 0.25em;
-  line-height: 1;
+.hero__role .Typewriter {
   display: inline-block;
-  border-radius: 0.25em;
-  border: 1px solid;
 }
 
-[data-entity]::after {
-  box-sizing: border-box;
-  content: attr(data-entity);
-  font-size: 0.6em;
-  line-height: 1;
-  padding: 0.35em;
-  border-radius: 0.35em;
+.hero__lead {
+  margin: 0 0 34px;
+}
+
+.hero__lead strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 34px;
+}
+
+.hero__socials {
+  padding-top: 4px;
+}
+
+/* ---------------- Visual ---------------- */
+
+.hero__visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+
+.hero__visual-glow {
+  position: absolute;
+  width: 78%;
+  height: 78%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(110, 139, 255, 0.22),
+    rgba(168, 85, 247, 0.1) 46%,
+    transparent 70%
+  );
+  filter: blur(46px);
+  animation: hero-breathe 7s ease-in-out infinite alternate;
+}
+
+@keyframes hero-breathe {
+  to {
+    transform: scale(1.16);
+    opacity: 0.72;
+  }
+}
+
+.hero__lottie {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 430px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero__lottie .container > svg {
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* Floating tech marks around the illustration. */
+.hero__orbit {
+  position: absolute;
+  inset: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hero__orbit-item {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  background: rgba(16, 18, 26, 0.72);
+  border: 1px solid var(--border-strong);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  box-shadow: var(--shadow);
+  font-size: 25px;
+  pointer-events: auto;
+  cursor: default;
+  animation: hero-float 6.5s ease-in-out infinite;
+  transition: transform 0.35s var(--ease), border-color 0.35s var(--ease),
+    box-shadow 0.35s var(--ease);
+}
+
+.hero__orbit-item:hover {
+  transform: scale(1.16) translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: 0 12px 34px -8px var(--accent-glow);
+}
+
+.hero__orbit-item:nth-child(1) {
+  top: 4%;
+  left: 2%;
+}
+.hero__orbit-item:nth-child(2) {
+  top: 20%;
+  right: 0%;
+}
+.hero__orbit-item:nth-child(3) {
+  top: 50%;
+  left: -4%;
+}
+.hero__orbit-item:nth-child(4) {
+  bottom: 20%;
+  right: 3%;
+}
+.hero__orbit-item:nth-child(5) {
+  bottom: 2%;
+  left: 16%;
+}
+.hero__orbit-item:nth-child(6) {
+  top: 34%;
+  right: 16%;
+}
+
+@keyframes hero-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-13px);
+  }
+}
+
+/* ---------------- Trust strip ---------------- */
+
+.hero__companies {
+  margin-top: 74px;
+  padding-top: 34px;
+  border-top: 1px solid var(--border);
+}
+
+.hero__companies-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0px 0px 0.1rem 0.5rem;
+  color: var(--text-dim);
+  margin-bottom: 20px;
 }
 
-[data-entity][data-entity="noun"] {
-  background: rgba(166, 226, 45, 0.2);
-  border-color: rgb(166, 226, 45);
-  color: rgb(255, 255, 255);
-}
-[data-entity][data-entity="noun"]::after {
-  background: rgb(166, 226, 45);
-  color: rgb(0, 0, 0);
-}
-
-[data-entity][data-entity="person"] {
-  background: rgba(45, 226, 217, 0);
-  border-color: rgb(45, 226, 141);
-  color: rgb(255, 255, 255);
+.hero__companies-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 26px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-[data-entity][data-entity="person"]::after {
-  background: rgb(45, 226, 141);
-  color: rgb(0, 0, 0);
+.hero__company {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-left: 15px;
+  border-left: 2px solid var(--border);
+  transition: border-color 0.35s var(--ease);
 }
 
-[data-entity][data-entity="skill"] {
-  background: rgb(187, 47, 117, 0.2);
-  border-color: rgb(187, 47, 117);
-  color: rgb(255, 255, 255);
+.hero__company:hover {
+  border-left-color: var(--accent);
 }
 
-[data-entity][data-entity="skill"]::after {
-  background: rgb(187, 47, 117);
+.hero__company-name {
+  font-size: 0.97rem;
+  font-weight: 650;
+  color: var(--text);
+  letter-spacing: -0.018em;
 }
 
-[data-entity][data-entity="freelance"] {
-  background: rgb(187, 161, 47, 0.2);
-  border-color: rgb(187, 161, 47);
-  color: rgb(255, 255, 255);
+.hero__company-detail {
+  font-size: 0.775rem;
+  color: var(--text-dim);
 }
 
-[data-entity][data-entity="freelance"]::after {
-  background: rgb(187, 161, 47);
-  color: rgb(0, 0, 0);
+/* ---------------- Responsive ---------------- */
+
+@media (max-width: 1024px) {
+  .hero__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /* The floating marks are positioned against a two-column hero. Once the
+     layout stacks they collide with the architecture card, so drop them --
+     the same logos already appear in the skills constellations below. */
+  .hero__orbit {
+    display: none;
+  }
+
+  .hero__visual {
+    order: -1;
+    min-height: 300px;
+  }
+
+  .hero__lottie {
+    max-width: 340px;
+  }
+
+  .hero__companies-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-[data-entity][data-entity="verb"] {
-  background: rgba(47, 187, 171, 0.2);
-  border-color: rgb(47, 187, 171);
-  color: rgb(255, 255, 255);
+@media (max-width: 768px) {
+  .hero {
+    padding: 118px 0 30px;
+  }
+
+  .hero__orbit-item {
+    width: 42px;
+    height: 42px;
+    font-size: 21px;
+  }
+
+  .hero__actions .ds-btn {
+    flex: 1 1 auto;
+  }
 }
 
-[data-entity][data-entity="verb"]::after {
-  background: rgb(21, 124, 112);
+@media (max-width: 520px) {
+  .hero__companies-list {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
 }

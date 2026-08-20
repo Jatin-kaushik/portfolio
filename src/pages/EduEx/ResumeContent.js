@@ -1,23 +1,21 @@
 import React from "react";
 
-function ResumeContent(props) {
+export default function ResumeContent(props) {
   return (
     <div className="resume-item">
-      <h2 className={props.title ? "resume-title" : "resume-no-title"}>
-        {props.title} 
-      </h2>
-      <span className="date"><em>{props.date}</em></span>
-      <h6 className={props.title ? "resume-subtitle" : "resume-no-title"}>{props.subtitle}</h6>
-      <p>
-       
-      </p>
+      <div className="resume-item-head">
+        {props.title ? <h4 className="resume-role">{props.title}</h4> : null}
+        {props.subtitle ? (
+          <p className="resume-subtitle">{props.subtitle}</p>
+        ) : null}
+        {props.date ? <span className="date">{props.date}</span> : null}
+      </div>
+
       <ul>
         {props.content.map((value, index) => (
-          <li key={index}> ‣ {value}</li>
+          <li key={index}>{value}</li>
         ))}
       </ul>
     </div>
   );
 }
-
-export default ResumeContent;

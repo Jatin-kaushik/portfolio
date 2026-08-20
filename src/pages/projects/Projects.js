@@ -1,121 +1,169 @@
 import React, { Component } from "react";
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
-import Button from "../../components/button/Button";
-import Badge from "react-bootstrap/Badge";
 import TopButton from "../../components/topButton/TopButton";
-import { Fade } from "react-reveal";
-import { projectsHeader } from "../../portfolio.js";
-import { projectcards } from "../../portfolio";
-import { CardColumns, Card } from "react-bootstrap";
+import Aurora from "../../components/aurora/Aurora";
+import { projectsHeader, projectcards, highlights } from "../../portfolio.js";
 import "./Projects.css";
-import ProjectsImg from "./ProjectsImg";
 
 class Projects extends Component {
   render() {
     const theme = this.props.theme;
+
     return (
-      <div className="projects-main">
+      <div className="projects-main page-root">
+        <Aurora />
         <Header theme={theme} />
-        <div className="basic-projects">
-          <Fade bottom duration={2000} distance="40px">
-            <div className="projects-heading-div">
-              <div className="projects-heading-img-div">
-                <ProjectsImg theme={theme} />
-              </div>
-              <div className="projects-heading-text-div">
-                <h1
-                  className="projects-heading-text"
-                  style={{ color: theme.orange }}
+
+        <section className="projects-hero">
+          <div className="ds-container">
+            <p className="ds-eyebrow">Portfolio</p>
+            <h1 className="ds-h1 projects-title">
+              {projectsHeader.title.replace("Projects", "")}
+              <span className="ds-gradient-text">Projects</span>
+            </h1>
+            <p className="ds-lead">{projectsHeader.description}</p>
+          </div>
+        </section>
+
+        {/* ---------- Professional work ---------- */}
+        <section className="projects-section">
+          <div className="ds-container">
+            <h2 className="projects-subhead">
+              Production systems
+              <span className="projects-subhead__note">
+                Delivered in enterprise roles
+              </span>
+            </h2>
+
+            <div className="proj-grid">
+              {highlights.map((item) => (
+                <article
+                  key={item.title}
+                  className="proj-card ds-glass ds-glass--interactive"
                 >
-                  {projectsHeader.title}
-                </h1>
-                <p
-                  className="projects-header-detail-text subTitle"
-                  style={{ color: theme.text }}
-                >
-                  {projectsHeader["description"]}
-                </p>
-              </div>
+                  <div className="proj-card__top">
+                    <span className="proj-card__icon">
+                      <span
+                        className="iconify"
+                        data-icon={item.icon}
+                        data-inline="false"
+                      />
+                    </span>
+                    <span className="ds-chip ds-chip--accent">{item.tag}</span>
+                  </div>
+                  <h3 className="proj-card__title">{item.title}</h3>
+                  <p className="proj-card__body">{item.body}</p>
+                  <ul className="proj-card__stack">
+                    {item.stack.map((tech) => (
+                      <li key={tech} className="ds-chip">
+                        {tech}
+                      </li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
             </div>
-          </Fade>
-        </div>
-        <div className="repo-cards-div-main">
-          <CardColumns>
-            {projectcards.list.map((proj) => {
-              return (
-                <Card className="h-100">
-                  <Card.Img
-                    variant="top"
-                    src={require(`../../assets/projects/${proj.img_path}`)}
-                  />
-                  <Card.Body>
-                    <Card.Title>
-                      <h2 style={{ lineHeight: "1.5", marginTop: "0" }}>
-                        {proj.title}
-                        <a
-                          style={{ color: theme.text }}
-                          href={proj.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <i
-                            className={`fas fa-external-link-alt`}
+          </div>
+        </section>
+
+        {/* ---------- Personal projects ---------- */}
+        {projectcards.list.length > 0 ? (
+          <section className="projects-section">
+            <div className="ds-container">
+              <h2 className="projects-subhead">
+                Personal projects
+                <span className="projects-subhead__note">
+                  Side builds &amp; experiments
+                </span>
+              </h2>
+
+              <div className="proj-grid">
+                {projectcards.list.map((proj) => (
+                  <article
+                    key={proj.title}
+                    className="proj-card proj-card--personal ds-glass ds-glass--interactive"
+                  >
+                    <div className="proj-card__media">
+                      <img
+                        src={require(`../../assets/projects/${proj.img_path}`)}
+                        alt={proj.title}
+                        loading="lazy"
+                      />
+                    </div>
+
+                    <div className="proj-card__content">
+                      <h3 className="proj-card__title">{proj.title}</h3>
+                      <p className="proj-card__body">{proj.description}</p>
+
+                      <ul className="proj-card__stack">
+                        {proj.tags.map((tag) => (
+                          <li
+                            key={tag.lang}
+                            className="ds-chip"
                             style={{
-                              color: proj.linkcolor,
-                              marginLeft: "10px",
-                            }}
-                          ></i>
-                        </a>
-                        <a
-                          style={{ color: theme.text }}
-                          href={proj.code}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <i
-                            className={`fab fa-github`}
-                            style={{
-                              color: proj.linkcolor,
-                              paddingLeft: "10px",
-                            }}
-                          ></i>
-                        </a>
-                      </h2>
-                    </Card.Title>
-                    <div>
-                      {proj.tags.map((demo2) => {
-                        return (
-                          <Badge
-                            style={{
-                              marginRight: "0.5em",
-                              backgroundColor: demo2.color,
+                              borderColor: `${tag.color}66`,
+                              color: "#D7DCE6",
                             }}
                           >
-                            {" "}
-                            {demo2.lang}
-                          </Badge>
-                        );
-                      })}
+                            {tag.lang}
+                          </li>
+                        ))}
+                      </ul>
+
+                      {proj.link || proj.code ? (
+                        <div className="proj-card__links">
+                          {proj.link ? (
+                            <a
+                              className="ds-btn ds-btn--ghost"
+                              href={proj.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Live demo
+                            </a>
+                          ) : null}
+                          {proj.code ? (
+                            <a
+                              className="ds-btn ds-btn--ghost"
+                              href={proj.code}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Source
+                            </a>
+                          ) : null}
+                        </div>
+                      ) : null}
                     </div>
-                    <div
-                      className="text-center"
-                      style={{ marginTop: "20px" }}
-                    ></div>
-                    <Card.Text>{proj.description}</Card.Text>
-                  </Card.Body>
-                </Card>
-              );
-            })}
-          </CardColumns>
-        </div>
-        <Button
-          text={"More Projects"}
-          className="project-button"
-          href="https://github.com/Jatin-kaushik"
-          newTab={true}
-          theme={theme}
-        />
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+        ) : null}
+
+        <section className="projects-cta">
+          <div className="ds-container">
+            <div className="projects-cta__inner ds-glass">
+              <div>
+                <h2 className="projects-cta__title">More on GitHub</h2>
+                <p className="projects-cta__body">
+                  Repositories, experiments and open-source contributions.
+                </p>
+              </div>
+              <a
+                className="ds-btn ds-btn--primary"
+                href="https://github.com/Jatin-kaushik"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View GitHub
+              </a>
+            </div>
+          </div>
+        </section>
+
         <Footer theme={this.props.theme} onToggle={this.props.onToggle} />
         <TopButton theme={this.props.theme} />
       </div>

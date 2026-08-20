@@ -1,63 +1,45 @@
-import React, { Component } from "react";
+import React from "react";
 import "./Skills.css";
 import SoftwareSkill from "../../components/softwareSkills/SoftwareSkill";
 import { skills } from "../../portfolio";
-import { Fade } from "react-reveal";
-import DataScienceImg from "./datascience/DataScienceImg";
-import FullStackImg from "./web/FullStackImg";
-import DesignImg from "./ui/DesignImg";
+import SkillVisual from "./SkillVisual";
+import { useReveal } from "../../hooks/useReveal";
 
-function GetSkillSvg(props) {
-  if (props.fileName === "DataScienceImg")
-    return <DataScienceImg theme={props.theme} />;
-  else if (props.fileName === "FullStackImg")
-    return <FullStackImg theme={props.theme} />;
-  return <DesignImg theme={props.theme} />;
-}
+function SkillBlock({ skill, theme }) {
+  const [ref, visible] = useReveal({ threshold: 0.12 });
 
-class SkillSection extends Component {
-  render() {
-    const theme = this.props.theme;
-    return (
-      <div>
-        {skills.data.map((skill) => {
-          return (
-            <div className="skills-main-div">
-              <Fade left duration={2000}>
-                <div className="skills-image-div">
-                  <GetSkillSvg fileName={skill.fileName} theme={theme} />
-                </div>
-              </Fade>
-              <div className="skills-text-div">
-                <Fade right duration={1000}>
-                  <h1 className="skills-heading" style={{ color: theme.blue }}>
-                    {skill.title}
-                  </h1>
-                </Fade>
-                <Fade right duration={1500}>
-                  <SoftwareSkill logos={skill.softwareSkills} />
-                </Fade>
-                <Fade right duration={2000}>
-                  <div>
-                    {skill.skills.map((skillSentence) => {
-                      return (
-                        <p
-                          className="subTitle skills-text"
-                          style={{ color: theme.text }}
-                        >
-                          {skillSentence}
-                        </p>
-                      );
-                    })}
-                  </div>
-                </Fade>
-              </div>
-            </div>
-          );
-        })}
+  return (
+    <div
+      ref={ref}
+      className={`skills-main-div ds-glass ds-reveal ${
+        visible ? "is-visible" : ""
+      }`}
+    >
+      <div className="skills-image-div">
+        <SkillVisual skill={skill} />
       </div>
-    );
-  }
+
+      <div className="skills-text-div">
+        <h3 className="skills-heading">{skill.title}</h3>
+        <SoftwareSkill logos={skill.softwareSkills} />
+        <div>
+          {skill.skills.map((sentence) => (
+            <p className="skills-text" key={sentence}>
+              {sentence.replace(/^⚡\s*/, "")}
+            </p>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default SkillSection;
+export default function SkillSection(props) {
+  return (
+    <div>
+      {skills.data.map((skill) => (
+        <SkillBlock key={skill.title} skill={skill} theme={props.theme} />
+      ))}
+    </div>
+  );
+}
