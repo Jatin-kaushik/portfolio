@@ -78,7 +78,7 @@ class Projects extends Component {
                 </span>
               </h2>
 
-              <div className="proj-grid">
+              <div className="proj-grid proj-grid--personal">
                 {projectcards.list.map((proj) => (
                   <article
                     key={proj.title}
@@ -98,14 +98,10 @@ class Projects extends Component {
 
                       <ul className="proj-card__stack">
                         {proj.tags.map((tag) => (
-                          <li
-                            key={tag.lang}
-                            className="ds-chip"
-                            style={{
-                              borderColor: `${tag.color}66`,
-                              color: "#D7DCE6",
-                            }}
-                          >
+                          // Uniform chips. The per-tag colours in the data were
+                          // originally badge fills; used as borders they read as
+                          // arbitrary next to the production cards above.
+                          <li key={tag.lang} className="ds-chip">
                             {tag.lang}
                           </li>
                         ))}
