@@ -358,6 +358,14 @@ body {
   white-space: nowrap;
 }
 
+/* Icons inside buttons scale with the label and never stretch. */
+.ds-btn__icon {
+  width: 1.05em;
+  height: 1.05em;
+  flex-shrink: 0;
+  display: block;
+}
+
 .ds-btn--primary {
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
   color: #fff;

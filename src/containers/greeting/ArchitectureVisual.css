@@ -67,7 +67,9 @@
   display: block;
   width: 100%;
   height: auto;
-  padding: 20px 18px 6px;
+  /* Symmetric: 20px top with 6px bottom left the diagram visibly closer to
+     the stats footer than to the title bar. */
+  padding: 16px 18px;
 }
 
 .arch__wire {

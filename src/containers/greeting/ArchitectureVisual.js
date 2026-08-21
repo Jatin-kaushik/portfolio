@@ -87,7 +87,9 @@ export default function ArchitectureVisual() {
 
       <svg
         className="arch__svg"
-        viewBox="0 0 340 280"
+        // Nodes occupy y=18..278, so the box is 296 tall to leave an equal
+        // 18 units of margin above the first row and below the last.
+        viewBox="0 0 340 296"
         role="img"
         aria-label="Request flow: client through API gateway to FastAPI services, Kafka and NATS messaging, PostgreSQL storage and AWS Bedrock inference"
       >
