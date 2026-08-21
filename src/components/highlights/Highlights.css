@@ -51,15 +51,56 @@
 }
 
 .highlight__title {
-  margin: 0 0 12px;
+  margin: 0 0 8px;
   color: var(--text);
 }
 
+/* Organisation and period, so the reader can place the work without
+   cross-referencing the experience timeline. */
+.highlight__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 14px;
+  font-size: 0.78rem;
+}
+
+.highlight__org {
+  color: var(--accent-soft);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.highlight__period {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  padding-left: 8px;
+  border-left: 1px solid var(--border);
+}
+
+.highlight__impact {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  align-self: flex-start;
+  margin: 0 0 18px;
+  padding: 7px 13px;
+  border-radius: 9px;
+  background: rgba(52, 211, 153, 0.07);
+  border: 1px solid rgba(52, 211, 153, 0.2);
+  font-family: var(--font-mono);
+  font-size: 0.71rem;
+  letter-spacing: -0.005em;
+  color: #8fe3c4;
+}
+
 .highlight__body {
-  font-size: 0.925rem;
+  font-size: 0.9rem;
   line-height: 1.68;
   color: var(--text-muted);
-  margin: 0 0 22px;
+  margin: 0 0 16px;
   flex-grow: 1;
   font-weight: 350;
 }
@@ -86,4 +127,24 @@
   .highlight {
     padding: 26px 24px;
   }
+}
+
+.highlights__more {
+  margin: 34px 0 0;
+}
+
+.highlights__more a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 550;
+  color: var(--accent-soft);
+  text-decoration: none;
+  transition: gap 0.3s var(--ease), color 0.3s var(--ease);
+}
+
+.highlights__more a:hover {
+  gap: 13px;
+  color: #cdd8ff;
 }

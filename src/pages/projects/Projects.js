@@ -32,7 +32,7 @@ class Projects extends Component {
             <h2 className="projects-subhead">
               Production systems
               <span className="projects-subhead__note">
-                Delivered in enterprise roles
+                Shipped at HERE, Kellton and Infosys
               </span>
             </h2>
 
@@ -53,7 +53,18 @@ class Projects extends Component {
                     <span className="ds-chip ds-chip--accent">{item.tag}</span>
                   </div>
                   <h3 className="proj-card__title">{item.title}</h3>
+
+                  <p className="proj-card__meta">
+                    <span className="proj-card__org">{item.org}</span>
+                    <span className="proj-card__period">{item.period}</span>
+                  </p>
+
                   <p className="proj-card__body">{item.body}</p>
+
+                  {item.impact ? (
+                    <p className="proj-card__impact">{item.impact}</p>
+                  ) : null}
+
                   <ul className="proj-card__stack">
                     {item.stack.map((tech) => (
                       <li key={tech} className="ds-chip">

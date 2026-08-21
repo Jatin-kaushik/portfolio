@@ -60,39 +60,111 @@ const companies = [
   { name: "ByteBlanket", detail: "Data Science Engineer" },
 ];
 
-// Flagship work highlighted on the home page.
+// Flagship work. `featured` entries appear on the home page; the Projects
+// page lists all of them. Each carries the organisation and period so a
+// reader can place the work without cross-referencing the timeline.
 const highlights = [
   {
-    tag: "Generative AI",
-    title: "ATP GenAI Commentary Chatbot",
+    tag: "Platform",
+    title: "Enterprise Survey Platform",
+    org: "Kellton Tech",
+    period: "2025 \u2014 2026",
+    featured: true,
     body:
-      "AWS Bedrock agents and knowledge bases over millions of historical match records, generating context-aware commentary in under 15 seconds at 95% accuracy.",
-    stack: ["AWS Bedrock", "FastAPI", "RAG", "Python"],
+      "A microservice platform powering enterprise survey programmes end to end: 50+ advanced question types, custom branching logic, quota management, automated quality checks and approval workflows, with an insights and reporting layer on top. Also shipped AI-generated survey authoring so teams could draft instruments from a prompt.",
+    impact: "50+ question types \u00b7 4 deployment environments",
+    stack: [
+      "FastAPI",
+      "Microservices",
+      "Azure DevOps",
+      "PostgreSQL",
+      "MongoDB",
+    ],
+    icon: "simple-icons:microsoftazure",
+  },
+  {
+    tag: "Generative AI",
+    title: "Real-Time AI Commentary Platform",
+    org: "Infosys",
+    period: "2022 \u2014 2025",
+    featured: true,
+    body:
+      "Worked within the core team to build and deploy a live commentary system on AWS Bedrock. It consumes ball-tracking and player-tracking feeds during play and generates natural-language commentary in real time, served live to audiences mid-tournament.",
+    impact: "Live during international tournaments",
+    stack: ["AWS Bedrock", "Python", "FastAPI", "Real-time streams"],
     icon: "simple-icons:amazonaws",
   },
   {
     tag: "Infrastructure",
-    title: "RabbitMQ \u2192 NATS migration",
+    title: "RabbitMQ \u2192 NATS Pipeline Migration",
+    org: "Infosys",
+    period: "2022 \u2014 2025",
+    featured: true,
     body:
-      "Re-architected the messaging backbone behind the Australian Open, Roland Garros and Formula-E, cutting annual cloud spend by roughly 90% while holding 99.9% uptime.",
-    stack: ["NATS", "AWS ECS", "Kafka", "Hazelcast"],
+      "Designed and executed the migration of the tennis data-processing pipeline from RabbitMQ to NATS, re-architecting the messaging backbone behind the Australian Open, Roland Garros and Formula-E while the platform stayed in production.",
+    impact: "~90% cloud cost reduction \u00b7 99.9% uptime",
+    stack: ["NATS", "RabbitMQ", "Kafka", "Hazelcast", "AWS ECS"],
     icon: "simple-icons:apachekafka",
   },
   {
     tag: "Platform",
-    title: "Enterprise JIRA Sync Platform",
+    title: "JIRA Sync Platform",
+    org: "HERE Technologies",
+    period: "2026 \u2014 present",
+    featured: true,
     body:
-      "A FastAPI platform connecting global automotive customers with Professional Services and engineering teams, accelerating issue resolution across organisations.",
-    stack: ["FastAPI", "PostgreSQL", "Agentic AI", "Rovo"],
-    icon: "simple-icons:fastapi",
+      "Key contributor and developer on the platform that keeps JIRA instances in sync between HERE and its automotive customers, so engineers and managers on both sides track the same state. Built a UI layer with an AI assistant that lets managers inspect and configure syncs without touching the underlying configuration.",
+    impact: "Bi-directional sync across customer instances",
+    stack: ["FastAPI", "PostgreSQL", "Atlassian API", "Agentic AI"],
+    icon: "simple-icons:jira",
   },
   {
-    tag: "Security",
-    title: "PII encryption framework",
+    tag: "Generative AI",
+    title: "ATP Commentary Chatbot",
+    org: "Infosys",
+    period: "2022 \u2014 2025",
+    featured: false,
     body:
-      "AES-256 and RSA cryptography for multi-tenant SaaS, delivering GDPR/CCPA-compliant handling of sensitive customer data at 1M+ daily transactions.",
-    stack: ["AES-256", "RSA", "JWT", "RBAC"],
-    icon: "simple-icons:springsecurity",
+      "Worked with the core team on a conversational assistant built on AWS Bedrock using multi-step agent orchestration over knowledge bases of historical match data, answering context-aware questions about players and matches.",
+    impact: "95% accuracy \u00b7 under 15 seconds",
+    stack: ["AWS Bedrock", "Agents", "RAG", "Knowledge Bases"],
+    icon: "simple-icons:openai",
+  },
+  {
+    tag: "Sustainability",
+    title: "Carbon Emissions Tracking",
+    org: "Infosys \u00b7 Australian Open",
+    period: "2022 \u2014 2025",
+    featured: false,
+    body:
+      "Cloud-native services tracking the tournament's carbon footprint across operations, with forward prediction modelling the reduction path toward the event's net-zero commitment for 2030.",
+    impact: "Net-zero target modelling to 2030",
+    stack: ["Python", "AWS", "Analytics", "Dashboards"],
+    icon: "simple-icons:leaflet",
+  },
+  {
+    tag: "Reliability",
+    title: "Live Tournament Infrastructure",
+    org: "Infosys",
+    period: "2023 \u2014 2024",
+    featured: false,
+    body:
+      "Led infrastructure development and production readiness for Roland Garros and the Australian Open, and owned AWS infrastructure and monitoring for live tennis tournaments throughout the engagement \u2014 work with no maintenance window, since the events run live.",
+    impact: "Zero-downtime windows during live play",
+    stack: ["AWS", "ECS", "CloudWatch", "Monitoring"],
+    icon: "simple-icons:kubernetes",
+  },
+  {
+    tag: "Agentic AI",
+    title: "Engineering Automation Suite",
+    org: "HERE Technologies",
+    period: "2026 \u2014 present",
+    featured: false,
+    body:
+      "A growing set of internal automations: Atlassian Rovo agents that compress reporting and tracking workflows for leadership, a production dashboard built with Kiro and GitHub Copilot to track projects and delivery, and Python API tooling that automates recurring work for the Professional Services team.",
+    impact: "Rovo agents \u00b7 Kiro \u00b7 Copilot \u00b7 Python",
+    stack: ["Python", "Atlassian Rovo", "Kiro", "GitHub Copilot", "Dash"],
+    icon: "simple-icons:githubcopilot",
   },
 ];
 
