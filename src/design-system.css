@@ -41,8 +41,10 @@
   --radius-lg: 22px;
   --radius-xl: 32px;
 
-  --container: 1180px;
-  --gutter: 28px;
+  /* 1180px left ~166px of dead margin each side on a 1512px laptop, so the
+     page read as a narrow column floating in a wide dark field. */
+  --container: 1300px;
+  --gutter: 32px;
 
   /* --- Motion ----------------------------------------------------------- */
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
