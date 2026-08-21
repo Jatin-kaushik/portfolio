@@ -68,7 +68,7 @@ const highlights = [
     tag: "Platform",
     title: "Enterprise Survey Platform",
     org: "Kellton Tech",
-    period: "2025 \u2014 2026",
+    period: "Jun 2025 \u2014 Feb 2026",
     featured: true,
     body:
       "A microservice platform powering enterprise survey programmes end to end: 50+ advanced question types, custom branching logic, quota management, automated quality checks and approval workflows, with an insights and reporting layer on top. Also shipped AI-generated survey authoring so teams could draft instruments from a prompt.",
@@ -86,7 +86,7 @@ const highlights = [
     tag: "Generative AI",
     title: "Real-Time AI Commentary Platform",
     org: "Infosys",
-    period: "2022 \u2014 2025",
+    period: "Aug 2022 \u2014 May 2025",
     featured: true,
     body:
       "Worked within the core team to build and deploy a live commentary system on AWS Bedrock. It consumes ball-tracking and player-tracking feeds during play and generates natural-language commentary in real time, served live to audiences mid-tournament.",
@@ -98,7 +98,7 @@ const highlights = [
     tag: "Infrastructure",
     title: "RabbitMQ \u2192 NATS Pipeline Migration",
     org: "Infosys",
-    period: "2022 \u2014 2025",
+    period: "Aug 2022 \u2014 May 2025",
     featured: true,
     body:
       "Designed and executed the migration of the tennis data-processing pipeline from RabbitMQ to NATS, re-architecting the messaging backbone behind the Australian Open, Roland Garros and Formula-E while the platform stayed in production.",
@@ -110,7 +110,7 @@ const highlights = [
     tag: "Platform",
     title: "JIRA Sync Platform",
     org: "HERE Technologies",
-    period: "2026 \u2014 present",
+    period: "Feb 2026 \u2014 Present",
     featured: true,
     body:
       "Key contributor and developer on the platform that keeps JIRA instances in sync between HERE and its automotive customers, so engineers and managers on both sides track the same state. Built a UI layer with an AI assistant that lets managers inspect and configure syncs without touching the underlying configuration.",
@@ -122,7 +122,7 @@ const highlights = [
     tag: "Generative AI",
     title: "ATP Commentary Chatbot",
     org: "Infosys",
-    period: "2022 \u2014 2025",
+    period: "Aug 2022 \u2014 May 2025",
     featured: false,
     body:
       "Worked with the core team on a conversational assistant built on AWS Bedrock using multi-step agent orchestration over knowledge bases of historical match data, answering context-aware questions about players and matches.",
@@ -134,7 +134,7 @@ const highlights = [
     tag: "Sustainability",
     title: "Carbon Emissions Tracking",
     org: "Infosys \u00b7 Australian Open",
-    period: "2022 \u2014 2025",
+    period: "Aug 2022 \u2014 May 2025",
     featured: false,
     body:
       "Cloud-native services tracking the tournament's carbon footprint across operations, with forward prediction modelling the reduction path toward the event's net-zero commitment for 2030.",
@@ -158,7 +158,7 @@ const highlights = [
     tag: "Agentic AI",
     title: "Engineering Automation Suite",
     org: "HERE Technologies",
-    period: "2026 \u2014 present",
+    period: "Feb 2026 \u2014 Present",
     featured: false,
     body:
       "A growing set of internal automations: Atlassian Rovo agents that compress reporting and tracking workflows for leadership, a production dashboard built with Kiro and GitHub Copilot to track projects and delivery, and Python API tooling that automates recurring work for the Professional Services team.",
@@ -857,6 +857,10 @@ const resumeleft = {
           "Built enterprise-grade Performance and KPI Dashboards using Python Dash, Plotly, SQL and custom data pipelines, giving real-time visibility into CI/CD health, deployment metrics and engineering productivity.",
           "Spearheaded modernization of a legacy monolithic Navigation Platform into a scalable modular architecture, improving maintainability, deployment velocity and long-term platform reliability.",
           "Leveraged GitHub Copilot, Kiro and Atlassian Rovo Agents to implement AI-assisted development workflows, significantly reducing development effort across multiple strategic initiatives.",
+          "Built the UI layer for the JIRA Sync Platform with an embedded AI assistant, letting managers inspect and configure syncs directly rather than editing underlying configuration.",
+          "Developed automations on Atlassian Rovo that compress reporting and tracking workflows, giving leadership faster visibility into delivery status.",
+          "Delivered a production dashboard built with Kiro and GitHub Copilot to track projects and engineering work across teams.",
+          "Working as an AI automation engineer, building Python API tooling and AI-driven automation that removes recurring manual work for the Professional Services team.",
         ],
       },
       {
@@ -865,6 +869,9 @@ const resumeleft = {
         date: "Jun 2025 - Feb 2026",
         content: [
           "Architected a high-availability AI Content Generation Platform leveraging AWS Bedrock, LLMs and a custom multi-chunk processing framework, improving content generation throughput by 35%.",
+          "Built an enterprise survey platform as a set of Python microservices supporting 50+ advanced question types, custom branching logic, quota management, automated quality checks and approval workflows.",
+          "Delivered the platform's insights and reporting layer alongside AI-generated survey authoring, letting teams draft complete instruments from a prompt.",
+          "Ran deployment across four Azure environments \u2014 dev, QA, pre-staging and production \u2014 with CI/CD pipelines gating each promotion.",
           "Designed enterprise-grade PII encryption and decryption frameworks using AES-256 and RSA cryptography, ensuring GDPR/CCPA compliance across multi-tenant environments.",
           "Built scalable Python microservices using FastAPI, PostgreSQL and MongoDB, supporting dynamic survey workflows, asynchronous processing and complex business logic for enterprise SaaS applications.",
           "Developed secure RESTful APIs with JWT authentication, Role-Based Access Control (RBAC), API versioning, validation frameworks and comprehensive audit logging.",
@@ -881,11 +888,13 @@ const resumeleft = {
         content: [
           "Led large-scale infrastructure modernization for global sporting events including Australian Open, Roland Garros, ATP Tours and Formula-E, migrating pipelines from RabbitMQ to NATS and optimizing AWS ECS, cutting annual cloud costs from $31K to $3K (~90%) while maintaining 99.9% uptime.",
           "Architected a GenAI Commentary Chatbot for ATP using AWS Bedrock, AI Agents, Knowledge Bases and Python FastAPI, processing millions of historical match records to generate context-aware commentary in under 15 seconds with 95% accuracy.",
+          "Worked within the core team to build and deploy a real-time AI commentary platform on AWS Bedrock, generating live natural-language commentary from ball-tracking and player-tracking feeds during play.",
+          "Led infrastructure development and production readiness for Roland Garros and the Australian Open across 2023 and 2024, and owned AWS infrastructure and monitoring for live tennis tournaments throughout the engagement.",
           "Engineered and deployed 12 Java Spring Boot microservices on AWS Lambda, API Gateway and DynamoDB within 2.5 weeks, enabling real-time Augmented Reality (AR) fan experiences during live tournaments.",
           "Redesigned sports data ingestion platforms using Apache Kafka and Hazelcast for Hawk-Eye data streams, improving ingestion efficiency by 60% and cutting processing latency from 5 seconds to under 500 milliseconds.",
           "Resolved critical scalability bottlenecks using backpressure handling, in-memory queuing and circuit-breaker patterns, enabling reliable processing of 10K+ events per second with zero data-loss incidents.",
           "Implemented an intelligent AWS S3 caching layer and optimized PostgreSQL RDS workloads, reducing database load from 100% CPU utilization to 4 ACU at peak and improving API response times by 70%.",
-          "Developed cloud-native Carbon Emissions Tracking Microservices for the Green Act Movement initiative, integrating third-party sustainability APIs and analytics dashboards.",
+          "Developed cloud-native carbon emissions tracking services for the Australian Open under the Green Act Movement initiative, integrating third-party sustainability APIs and analytics dashboards, with forward prediction modelling the reduction path toward the event\u2019s net-zero commitment for 2030.",
           "Led performance tuning and capacity planning across distributed systems, improving throughput and reliability during peak tournament traffic.",
         ],
       },
