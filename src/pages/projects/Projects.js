@@ -95,12 +95,28 @@ class Projects extends Component {
                     key={proj.title}
                     className="proj-card proj-card--personal ds-glass ds-glass--interactive"
                   >
-                    <div className="proj-card__media">
-                      <img
-                        src={require(`../../assets/projects/${proj.img_path}`)}
-                        alt={proj.title}
-                        loading="lazy"
-                      />
+                    <div
+                      className={`proj-card__media ${
+                        proj.img_path ? "" : "proj-card__media--mark"
+                      }`}
+                    >
+                      {proj.img_path ? (
+                        <img
+                          src={require(`../../assets/projects/${proj.img_path}`)}
+                          alt={proj.title}
+                          loading="lazy"
+                        />
+                      ) : (
+                        // No screenshot on file. require() would throw on an
+                        // empty path, so render the project's icon instead.
+                        <span className="proj-card__mark" aria-hidden="true">
+                          <span
+                            className="iconify"
+                            data-icon={proj.icon}
+                            data-inline="false"
+                          />
+                        </span>
+                      )}
                     </div>
 
                     <div className="proj-card__content">

@@ -682,6 +682,54 @@ const projectcards = {
       linkcolor: "white",
     },
 
+    {
+      title: "3D Web View \u2014 Dell Experience Store",
+      // No screenshot on file: the card falls back to the icon mark below.
+      img_path: "",
+      icon: "simple-icons:dell",
+      description:
+        "An interactive 3D walkthrough of the Dell Experience Store, letting visitors move through the showroom and inspect products directly in the browser rather than from a flat product page.",
+      tags: [
+        { lang: "3D Web", color: "#004782" },
+        { lang: "WebGL", color: "#990000" },
+        { lang: "JavaScript", color: "#f7df1e" },
+      ],
+      link: "",
+      code: "",
+      linkcolor: "white",
+    },
+    {
+      title: "Face Recognition UI for Banking",
+      img_path: "8683-face-scanning.gif",
+      icon: "simple-icons:opencv",
+      description:
+        "A front end for face-based authentication in a banking flow, built over the computer-vision models behind the signature-verification and facial-recognition work delivered for a fintech client.",
+      tags: [
+        { lang: "Python", color: "#004782" },
+        { lang: "OpenCV", color: "#00a100" },
+        { lang: "Deep Learning", color: "#820032" },
+        { lang: "Flask", color: "#303030" },
+      ],
+      link: "",
+      code: "",
+      linkcolor: "white",
+    },
+    {
+      title: "LearnHub",
+      img_path: "",
+      icon: "simple-icons:googleclassroom",
+      description:
+        "A learning platform for students and working professionals, pairing structured course content with career guidance and support for breaking into IT roles.",
+      tags: [
+        { lang: "Web Platform", color: "#004782" },
+        { lang: "Python", color: "#3776AB" },
+        { lang: "Education", color: "#ff4b4b" },
+      ],
+      link: "",
+      code: "",
+      linkcolor: "white",
+    },
+
     // {
     //   title: "Signature Verification Recognition",
     //   img_path: "voice.gif",

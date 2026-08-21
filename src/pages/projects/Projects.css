@@ -268,3 +268,37 @@
     padding: 26px 24px;
   }
 }
+
+/* Media fallback when a personal project has no screenshot on file. */
+.proj-card__media--mark {
+  background: linear-gradient(
+    145deg,
+    rgba(110, 139, 255, 0.12),
+    rgba(168, 85, 247, 0.06)
+  );
+}
+
+.proj-card__mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 84px;
+  height: 84px;
+  border-radius: 22px;
+  background: rgba(10, 12, 18, 0.6);
+  border: 1px solid var(--border-strong);
+  font-size: 40px;
+  color: var(--accent-soft);
+  transition: transform 0.45s var(--ease), border-color 0.45s var(--ease);
+}
+
+.proj-card__mark svg {
+  display: block;
+  width: 1em;
+  height: 1em;
+}
+
+.proj-card--personal:hover .proj-card__mark {
+  transform: scale(1.06);
+  border-color: var(--accent);
+}
